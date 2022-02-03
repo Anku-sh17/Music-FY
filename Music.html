@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="Music.js"></script>
     <title>Music Player</title>
   </head>
   <body class="bg-white">
+    <!-- Navigation bar -->
+
     <nav
       class="top-0 absolute z-40 w-full flex-wrap items-center justify-between px-2 py-3 bg-black"
     >
@@ -19,23 +22,23 @@
           class="w-full relative flex justify-between lg:auto lg:static lg:block lg:justify-start space-x-7"
         >
           <a
-            href="home"
-            class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
+            href=#"
+            class="Home text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
             >Home</a
           >
           <a
-            href="About"
-            class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
+            href="#"
+            class="About text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
             >About</a
           >
           <a
-            href="About"
-            class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
-            >Top Hits</a
+            href="#"
+            class="TopArtists text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
+            >Top Artists</a
           >
           <a
-            href="About"
-            class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
+            href="#"
+            class="Trending text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
             >Trending</a
           >
           <a
@@ -55,33 +58,146 @@
         </div>
       </div>
     </nav>
-    <div class="bg-blue-400 py-20 flex items-center justify-center w-full">
-      <div class="bg-white rounded-lg shadow-2xl w-1/4">
-        <img src="Harry.jpg" class="rounded-t-lg h-60 w-full object-cover" />
-        <header
-          class="bg-gray-100 rounded-t-lg py-5 px-40 text-sm justify-center"
-        >
-          Adore You
-        </header>
-        <div class="p-8 space-x-1">
-          <h2 class="text-xl font-extrablod mb-5 justify-center px-36">
-            hello
-          </h2>
-          <button class="bg-blue-400 text-blue-50 rounded-lg py-2 px-4 mt-5">
-            previous
-          </button>
-          <button class="bg-blue-400 text-blue-50 rounded-lg py-2 px-4 mt-5">
-            play/pause
-          </button>
-          <button class="bg-blue-400 text-blue-50 rounded-lg py-2 px-4 mt-5">
-            next
-          </button>
-          <footer class="text-right py-3 px-8 text-xs text-gray-500"></footer>
+
+    <!-- Song display -->
+
+    <div class=" MainDisplay m-auto h-screen flex justify-center items-center py-48 hidden">
+      <div class="max-w-xs rounded-xl overflow-hidden shadow-lg my-2 py-3 w-1/2">
+        <figure class="relative max-w-xs cursor-pointer h-60">
+          <img class="w-full h-60 rounded-t-lg" src="Harry.jpg" alt="Sunset in the mountains">
+          <figcaption class="absolute text-lg -mt-14 text-white px-4">
+            </figcatpion>
+        </figure>
+    
+        <div class="px-6 py-3">
+          <div class="font-bold text-xl">Watermelon Sugar</div>
+        </div>
+        <div class="px-6 py-3">
+          <div class="font-semibold text-xl">Harry Styles</div>
+        </div>
+    
+        <div class="flex px-6 text-gray-600">
+          <div class="flex-shrink-0 h-16 w-32">
+            <h4 class="text-xs">Duration</h4>
+            <h1 class="font-semibold text-pink-600 text-xl">30 Days</h1>
+          </div>
+    
+          <div class="flex-shrink-0 h-16 w-32">
+            <h4 class="text-xs">Release Date</h4>
+            <h1 class="font-semibold text-pink-600 text-xl">12 Apr 2022</h1>
+          </div>
+        </div>
+
+        <div class="flex px-6 space-x-14 py-6">
+          <div class="p-2 bg-gray-100 rounded flex flex-col justify-center items-center shadow-sm">
+            <h4 class="text-xs font-extralight">Previous</h4>
+            <!-- <h4 class="text-xs font-extralight">3.00 pm</h4> -->
+          </div>
+          
+          <div class="p-2 bg-gray-100 rounded flex flex-col justify-center items-center shadow-sm">
+            <h4 class="text-xs font-extralight">Play/Pause</h4>
+            <!-- <h4 class="text-xs font-extralight">3.00 pm</h4> -->
+          </div>
+          
+          <div class="p-2 bg-gray-100 rounded flex flex-col justify-center items-center shadow-sm">
+            <h4 class="text-xs font-extralight">Next</h4>
+            <!-- <h4 class="text-xs font-extralight">3.00 pm</h4> -->
+          </div>
         </div>
       </div>
     </div>
-    <div class="bottom-0 bg-black text-stone-50 h-12">
-      This is built by ankush
+
+    <!-- Modal Window for about -->
+
+    <div class=" ModalAbout bg-white  flex items-center justify-center py-48 hidden">
+      <div class="bg-black rounded-lg shadow-2xl w-1/2 h-72">
+        <div class="p-8 space-x-1 text-white">
+        </div>
+      </div>
+    </div>
+    
+    <!-- Modal Window2 for top artists-->
+
+    <div class="ModalTopArtist min-h-screen flex items-center bg-white-500 hidden">
+      <div class="flex-1 max-w-5xl mx-auto p-10">
+        <ul class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-8">
+          <li class="bg-black rounded-lg shadow-xl"><div class="h-32 ">
+            <img src="Harry.jpg" class="h-32 w-full">
+          </div></li>
+          <li class="bg-black rounded-lg shadow-xl"><div class="h-32">
+            <img src="Harry.jpg" class="h-32 w-full">
+          </div></li>
+          <li class="bg-black rounded-lg shadow-xl"><div class="h-32">
+            <img src="Harry.jpg" class="h-32 w-full">
+          </div></li>
+          <li class="bg-black rounded-lg shadow-xl"><div class="h-32">
+            <img src="Harry.jpg" class="h-32 w-full">
+          </div></li>
+          <li class="bg-black rounded-lg shadow-xl"><div class="h-32">
+            <img src="Harry.jpg" class="h-32 w-full">
+          </div></li>
+          <li class="bg-black rounded-lg shadow-xl"><div class="h-32">
+            <img src="Harry.jpg" class="h-32 w-full">
+          </div></li>
+          <li class="bg-black rounded-lg shadow-xl"><div class="h-32">
+            <img src="Harry.jpg" class="h-32 w-full">
+          </div></li>
+          <li class="bg-black rounded-lg shadow-xl"><div class="h-32">
+            <img src="Harry.jpg" class="h-32 w-full">
+          </div></li>
+          <li class="bg-black rounded-lg shadow-xl"><div class="h-32">
+            <img src="Harry.jpg" class="h-32 w-full">
+          </div></li>
+        </ul>
+      </div>
+    </div>
+
+
+    <!-- Trending Top5 -->
+
+    <div class="ModalTrending min-h-screen flex items-center bg-white-500 hidden">
+      <div class="flex-1 max-w-4xl mx-auto p-10">
+        <ul class="space-y-4">
+          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
+          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
+          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
+          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
+          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
+        </ul>
+      </div>
+    </div>
+
+
+    <!-- This window will be displayed when user will click on top artists -->
+    <div class="min-h-screen flex items-center bg-white-500 hidden">
+      <div class="flex-1 max-w-4xl mx-auto p-10">
+        <ul class="grid grid-cols-6 grid-rows-4 gap-8">
+          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
+          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
+          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
+          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
+          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
+          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
+          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
+          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
+          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
+          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
+          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
+          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
+          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
+          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
+          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
+          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
+          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
+          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
+          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
+          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
+          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
+          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
+          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
+          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
+        </ul>
+      </div>
     </div>
   </body>
 </html>
