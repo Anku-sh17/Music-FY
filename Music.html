@@ -4,200 +4,54 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="Music.js"></script>
-    <title>Music Player</title>
+    <link rel="stylesheet" href="Music.css" />
+    <title>Music-FY</title>
   </head>
-  <body class="bg-white">
-    <!-- Navigation bar -->
-
-    <nav
-      class="top-0 absolute z-40 w-full flex-wrap items-center justify-between px-2 py-3 bg-black"
-    >
-      <div
-        class="container px-4 mx-auto flex flex-wrap items-center justify-between"
-      >
-        <div
-          class="w-full relative flex justify-between lg:auto lg:static lg:block lg:justify-start space-x-7"
-        >
-          <a
-            href=#"
-            class="Home text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
-            >Home</a
-          >
-          <a
-            href="#"
-            class="About text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
-            >About</a
-          >
-          <a
-            href="#"
-            class="TopArtists text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
-            >Top Artists</a
-          >
-          <a
-            href="#"
-            class="Trending text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
-            >Trending</a
-          >
-          <a
-            href="#"
-            class="logo px-72 font-extrabold text-white font-serif text-lg"
-          >
-            Music-Fy
-          </a>
-          <a class="flex border-2 border-gray-200 rounded float-right">
-            <input
-              type="text"
-              class="px-4 py-2 w-80"
-              placeholder="Enter The Music Name/Artist..."
-            />
-            <button class="px-4 text-white bg-gray-600 border-l">Search</button>
-          </a>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Song display -->
-
-    <div class=" MainDisplay m-auto h-screen flex justify-center items-center py-48 hidden">
-      <div class="max-w-xs rounded-xl overflow-hidden shadow-lg my-2 py-3 w-1/2">
-        <figure class="relative max-w-xs cursor-pointer h-60">
-          <img class="w-full h-60 rounded-t-lg" src="Harry.jpg" alt="Sunset in the mountains">
-          <figcaption class="absolute text-lg -mt-14 text-white px-4">
-            </figcatpion>
-        </figure>
-    
-        <div class="px-6 py-3">
-          <div class="font-bold text-xl">Watermelon Sugar</div>
-        </div>
-        <div class="px-6 py-3">
-          <div class="font-semibold text-xl">Harry Styles</div>
-        </div>
-    
-        <div class="flex px-6 text-gray-600">
-          <div class="flex-shrink-0 h-16 w-32">
-            <h4 class="text-xs">Duration</h4>
-            <h1 class="font-semibold text-pink-600 text-xl">30 Days</h1>
-          </div>
-    
-          <div class="flex-shrink-0 h-16 w-32">
-            <h4 class="text-xs">Release Date</h4>
-            <h1 class="font-semibold text-pink-600 text-xl">12 Apr 2022</h1>
-          </div>
-        </div>
-
-        <div class="flex px-6 space-x-14 py-6">
-          <div class="p-2 bg-gray-100 rounded flex flex-col justify-center items-center shadow-sm">
-            <h4 class="text-xs font-extralight">Previous</h4>
-            <!-- <h4 class="text-xs font-extralight">3.00 pm</h4> -->
-          </div>
-          
-          <div class="p-2 bg-gray-100 rounded flex flex-col justify-center items-center shadow-sm">
-            <h4 class="text-xs font-extralight">Play/Pause</h4>
-            <!-- <h4 class="text-xs font-extralight">3.00 pm</h4> -->
-          </div>
-          
-          <div class="p-2 bg-gray-100 rounded flex flex-col justify-center items-center shadow-sm">
-            <h4 class="text-xs font-extralight">Next</h4>
-            <!-- <h4 class="text-xs font-extralight">3.00 pm</h4> -->
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal Window for about -->
-
-    <div class=" ModalAbout bg-white  flex items-center justify-center py-48 hidden">
-      <div class="bg-black rounded-lg shadow-2xl w-1/2 h-72">
-        <div class="p-8 space-x-1 text-white">
-        </div>
-      </div>
-    </div>
-    
-    <!-- Modal Window2 for top artists-->
-
-    <div class="ModalTopArtist min-h-screen flex items-center bg-white-500 hidden">
-      <div class="flex-1 max-w-5xl mx-auto p-10">
-        <ul class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-8">
-          <li class="bg-black rounded-lg shadow-xl"><div class="h-32 ">
-            <img src="Harry.jpg" class="h-32 w-full">
-          </div></li>
-          <li class="bg-black rounded-lg shadow-xl"><div class="h-32">
-            <img src="Harry.jpg" class="h-32 w-full">
-          </div></li>
-          <li class="bg-black rounded-lg shadow-xl"><div class="h-32">
-            <img src="Harry.jpg" class="h-32 w-full">
-          </div></li>
-          <li class="bg-black rounded-lg shadow-xl"><div class="h-32">
-            <img src="Harry.jpg" class="h-32 w-full">
-          </div></li>
-          <li class="bg-black rounded-lg shadow-xl"><div class="h-32">
-            <img src="Harry.jpg" class="h-32 w-full">
-          </div></li>
-          <li class="bg-black rounded-lg shadow-xl"><div class="h-32">
-            <img src="Harry.jpg" class="h-32 w-full">
-          </div></li>
-          <li class="bg-black rounded-lg shadow-xl"><div class="h-32">
-            <img src="Harry.jpg" class="h-32 w-full">
-          </div></li>
-          <li class="bg-black rounded-lg shadow-xl"><div class="h-32">
-            <img src="Harry.jpg" class="h-32 w-full">
-          </div></li>
-          <li class="bg-black rounded-lg shadow-xl"><div class="h-32">
-            <img src="Harry.jpg" class="h-32 w-full">
-          </div></li>
+  <body>
+    <header>
+      <nav>
+        <ul class="nav_links">
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Top Artists</a>
+          </li>
+          <li>
+            <a href="#">Trending</a>
+          </li>
         </ul>
+      </nav>
+      <a href="#" class="logo">Music-FY</a>
+    </header>
+
+    <!-- Main class to disply current song -->
+    <div class="main hidden">
+      <div>
+        <img
+          src="https://media.npr.org/assets/img/2020/02/27/wide-use_hpromophoto_helenepambrun-72fdb64792139d94a06f18686d0bb3131a238a70-s1100-c50.jpg"
+          class="artist_image"
+        />
       </div>
+      <div>
+        <div class="song_name">WaterMelon Sugar</div>
+        <div class="song_artist">...Harry Styles</div>
+      </div>
+      <!-- Play/pause/next buttons remaing -->
     </div>
 
-
-    <!-- Trending Top5 -->
-
-    <div class="ModalTrending min-h-screen flex items-center bg-white-500 hidden">
-      <div class="flex-1 max-w-4xl mx-auto p-10">
-        <ul class="space-y-4">
-          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
-          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
-          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
-          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
-          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
-        </ul>
-      </div>
+    <!-- Modal class for about section -->
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <h1>this site is made by ankush gupta</h1>
     </div>
+    <div class="overlay hidden"></div>
 
-
-    <!-- This window will be displayed when user will click on top artists -->
-    <div class="min-h-screen flex items-center bg-white-500 hidden">
-      <div class="flex-1 max-w-4xl mx-auto p-10">
-        <ul class="grid grid-cols-6 grid-rows-4 gap-8">
-          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
-          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
-          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
-          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
-          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
-          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
-          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
-          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
-          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
-          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
-          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
-          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
-          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
-          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
-          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
-          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
-          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
-          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
-          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
-          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
-          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
-          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
-          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
-          <li class="bg-black rounded-lg shadow-xl"><div class="h-24"></div></li>
-        </ul>
-      </div>
-    </div>
+    <!-- modal class for top artist -->
+    <!-- modal class when user click on top artist -->
+    <!-- modal class for trending -->
   </body>
 </html>
