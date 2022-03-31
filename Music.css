@@ -6,7 +6,7 @@
   padding: 0;
 }
 
-/* navigation bar */
+/* navigation bar=================================================================================== */
 
 li,
 a,
@@ -53,7 +53,7 @@ h1 {
 }
 
 /* 
-about section */
+about section============================================================================================ */
 
 .About-display {
   position: absolute;
@@ -91,115 +91,73 @@ about section */
   z-index: 5;
 }
 
-/*main*/
-main {
-  width: 100vw;
-  height: 90vh;
+/*main================================================================================*/
+
+.player {
+  height: 85vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.card {
-  display: grid;
-  grid-template-columns: 300px;
-  grid-template-rows: 210px 210px 80px;
-  grid-template-areas: "image" "text" "stats";
-  border-radius: 18px;
-  background: white;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
-  font-family: roboto;
-  text-align: center;
-}
-.card-image {
-  grid-area: image;
-}
-.card-text {
-  grid-area: text;
-}
-.card-stats {
-  grid-area: stats;
-}
-.card-image {
-  grid-area: image;
-  background: url("https://st2.depositphotos.com/6694302/9685/i/600/depositphotos_96855090-stock-photo-ed-sheeran-concert.jpg");
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  background-size: cover;
-}
-
-.card-text {
-  grid-area: text;
-  margin: 20px;
-}
-.card-text .date {
-  color: rgb(255, 7, 110);
-  font-size: 13px;
-}
-.card-text p {
-  color: grey;
-  font-size: 15px;
-  font-weight: 300;
-  margin: 20px;
-}
-.card-text h2 {
-  margin-top: 0px;
-  font-size: 28px;
-}
-.card-stats {
-  grid-area: stats;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background: rgb(255, 7, 110);
-}
-.card-stats .stat {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  color: white;
-  padding: 10px;
+  justify-content: center;
 }
 
-.type {
-  appearance: none;
-  background-color: #ffffff;
-  border-radius: 40em;
-  border-style: none;
-  box-shadow: #adcfff 0 -12px 6px inset;
-  box-sizing: border-box;
-  color: #000000;
-  cursor: pointer;
-  display: inline-block;
-  font-family: -apple-system, sans-serif;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: -0.14px;
-  margin: 0;
-  outline: none;
-  padding: 1rem 1rem;
-  quotes: auto;
-  text-align: center;
-  text-decoration: none;
-  transition: all 0.15s;
-  touch-action: manipulation;
+.details {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 25px;
 }
 
-.type:hover {
-  background-color: #ffc229;
-  box-shadow: #ff6314 0 -6px 8px inset;
-  transform: scale(1.125);
+.track-art {
+  margin: 25px;
+  height: 250px;
+  width: 250px;
+  background: URL("https://media.istockphoto.com/vectors/music-note-icon-vector-illustration-vector-id1175435360?k=20&m=1175435360&s=612x612&w=0&h=1yoTgUwobvdFlNxUQtB7_NnWOUD83XOMZHvxUzkOJJs=");
+  background-size: cover;
+  background-position: center;
+  border-radius: 15%;
 }
 
-.type:active {
-  transform: scale(1.025);
+/* Changing the font sizes to suitable ones */
+
+.track-name {
+  font-size: 3rem;
 }
 
-/* Top Artist */
+.track-artist {
+  font-size: 1.5rem;
+}
+
+/* Using flex with the row direction to
+  align items in a horizontal direction */
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.playpause-track,
+.volume-track,
+.like-track {
+  padding: 45px;
+  opacity: 0.8;
+  /* Smoothly transition the opacity */
+  transition: opacity 0.2s;
+}
+
+/* Change the opacity when mouse is hovered */
+.playpause-track:hover,
+.volume-track:hover,
+.like-track:hover {
+  opacity: 1;
+}
+
+.fa-heart:hover {
+  color: red;
+}
+
+/* Top Artist =======================================================================*/
 
 .TopArtist {
   position: absolute;
@@ -209,8 +167,8 @@ main {
   width: 100vw;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
-  column-gap: 15px;
-  row-gap: 10px;
+  column-gap: 25px;
+  row-gap: 20px;
 }
 
 .imaf_HarryStyles,
@@ -230,17 +188,99 @@ main {
   object-fit: cover;
   object-position: center;
   border-radius: 8px;
-  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8rem 5rem rgba(0, 0, 0, 0.3);
+  opacity: 1;
 }
 
-/* trending */
+.imaf_BillieEilish {
+  background: URL("https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Billie_Eilish_2019_by_Glenn_Francis_%28cropped%29_2.jpg/800px-Billie_Eilish_2019_by_Glenn_Francis_%28cropped%29_2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.imaf_HarryStyles {
+  background: URL("https://media.npr.org/assets/img/2020/02/27/wide-use_hpromophoto_helenepambrun-72fdb64792139d94a06f18686d0bb3131a238a70-s1100-c50.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.imaf_EdSheeran {
+  background: URL("https://st2.depositphotos.com/6694302/9685/i/600/depositphotos_96855090-stock-photo-ed-sheeran-concert.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.imaf_ArianaGrande {
+  background: URL("https://i.scdn.co/image/ab6761610000e5ebcdce7620dc940db079bf4952");
+  background-size: cover;
+  background-position: center;
+}
+.imaf_ZyanMalik {
+  background: URL("https://aniportalimages.s3.amazonaws.com/media/details/zayynuuumsdfs2022011512393420220115124425.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.imaf_DuaLipa {
+  background: URL("https://upload.wikimedia.org/wikipedia/commons/9/95/Dua_Lipa_with_Warner_Music.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.imaf_TaylorSwift {
+  background: URL("https://i1.sndcdn.com/avatars-000500544273-6kcyh0-t500x500.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.imaf_BTS {
+  background: URL("https://pyxis.nymag.com/v1/imgs/c10/524/1853b57c011cf5fd8ebc8f4b149345d5d3-BTS-JOIN-LOUIS-VUITTON-AS-HOUSE-AMBASSAD.rsquare.w1200.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.imaf_JustinBieber {
+  background: URL("https://media.gq.com/photos/56bcb218cdf2db6945d2ef93/4:3/w_2000,h_1500,c_limit/bieber-coverstory-square.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.imaf_ShawnMendes {
+  background: URL("https://yt3.ggpht.com/QTpsceScLWmzgZXO6lPJo-s0CzCaGoat2S8PZzfdKtvqJTUh7jCLtYvCPH1RbUzVCOz2t_RIqIA=s900-c-k-c0x00ffffff-no-rj");
+  background-size: cover;
+  background-position: center;
+}
+.imaf_SelenaGomes {
+  background: URL("https://m.media-amazon.com/images/M/MV5BMjAwNTE2MDMyMl5BMl5BanBnXkFtZTgwMjAyODM3MTI@._V1_UY1200_CR134,0,630,1200_AL_.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.imaf_Blackpink {
+  background: URL("https://img.i-scmp.com/cdn-cgi/image/fit=contain,width=1098,format=auto/sites/default/files/styles/1200x800/public/d8/images/methode/2020/10/16/41e9b47c-07af-11eb-afc8-92e0da0ef1c3_image_hires_155550.jpg?itok=ihKswLDq&v=1602834958");
+  background-size: cover;
+  background-position: center;
+}
+
+.nameofartistHarry,
+.nameofartistBillie,
+.nameofartistED,
+.nameofartistAriana,
+.nameofartistZyan,
+.nameofartistDua,
+.nameofartistTaylor,
+.nameofartistBTS,
+.nameofartistJustin,
+.nameofartistShwan,
+.nameofartistSelena,
+.nameofartistBlackpink {
+  align-items: center;
+  text-align: center;
+  margin-top: 25%;
+  font-size: large;
+  font-weight: bold;
+  opacity: 0;
+}
+
+/* trending============================================================================= */
 
 .Trending-display {
   display: grid;
   grid-gap: 25px;
   margin-top: 5%;
-  width: 40%;
-  margin-left: 30%;
+  width: 60%;
+  margin-left: 20%;
 }
 .trending1 {
   background-color: black;
@@ -252,7 +292,7 @@ main {
 
 .trending1 {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
 }
 
 .hidden {

@@ -11,9 +11,9 @@ const Trendingsection = document.querySelector(".Trending-display");
 const mainsection = document.querySelector(".main");
 
 // Music Card buttons
-const Play = document.querySelector(".play");
-const volume = document.querySelector(".volume");
-const loop = document.querySelector(".loop");
+const Play = document.querySelector(".playpause-track");
+const volume = document.querySelector(".volume-track");
+const like = document.querySelector(".like-track");
 
 // Songs Cards Buttons
 const harrystyles = document.querySelector(".imaf_HarryStyles");
@@ -28,6 +28,20 @@ const justinbieber = document.querySelector(".imaf_JustinBieber");
 const shawnmendes = document.querySelector(".imaf_ShawnMendes");
 const selenagomez = document.querySelector(".imaf_SelenaGomes");
 const blackpink = document.querySelector(".imaf_Blackpink");
+
+// Artist Name Buttons
+const nameofartistharrystyles = document.querySelector(".nameofartistHarry");
+const nameofartistBillieEilish = document.querySelector(".nameofartistBillie");
+const nameofartistedsheeran = document.querySelector(".nameofartistED");
+const nameofartistarianagrande = document.querySelector(".nameofartistAriana");
+const nameofartistzyanmalik = document.querySelector(".nameofartistZyan");
+const nameofartistdualipa = document.querySelector(".nameofartistDua");
+const nameofartisttaylorswift = document.querySelector(".nameofartistTaylor");
+const nameofartistbts = document.querySelector(".nameofartistBTS");
+const nameofartistjustinbieber = document.querySelector(".nameofartistJustin");
+const nameofartistshawnmendes = document.querySelector(".nameofartistShwan");
+const nameofartistselenagomez = document.querySelector(".nameofartistSelena");
+const nameofartistblackpink = document.querySelector(".nameofartistBlackpink");
 
 // Navigation Bar switching
 const sections = [Aboutsection, TopArtistsection, Trendingsection, mainsection];
@@ -61,6 +75,7 @@ trending.addEventListener("click", function () {
 });
 
 // Music Playing
+
 let songsofartist = [
   {
     artistname: "Ed-sheeran",
@@ -176,29 +191,68 @@ const songcards = [
   selenagomez,
   blackpink,
 ];
+const songartist = [
+  nameofartistedsheeran,
+  nameofartistzyanmalik,
+  nameofartistBillieEilish,
+  nameofartistarianagrande,
+  nameofartistharrystyles,
+  nameofartistdualipa,
+  nameofartisttaylorswift,
+  nameofartistbts,
+  nameofartistjustinbieber,
+  nameofartistshawnmendes,
+  nameofartistselenagomez,
+  nameofartistblackpink,
+];
+
+like.addEventListener("click", function () {
+  let songname;
+  let artname;
+  songsofartist.forEach((m) => {
+    if (m.id == currentid) {
+      songname = m.Song;
+      artname = m.artistname;
+    }
+  });
+  const html = `<div class="trending1">
+  <div style="font-size: 2rem">${songname}</div>
+  <div style="font-size: 1.3rem">${artname}</div>
+  <i class="fas fa-play" style="font-size: 1.5rem"></i>
+  <i class="fas fa-trash" style="font-size: 1.5rem"></i>
+</div>`;
+  Trendingsection.insertAdjacentHTML("afterbegin", html);
+});
 
 Play.addEventListener("click", function () {
   if (!isplaying) {
     currenttrack.play();
     isplaying = true;
+    const html = `<i class="fas fa-pause" style="font-size: 3rem"></i>`;
+    Play.innerHTML = "";
+    Play.insertAdjacentHTML("afterbegin", html);
   } else {
     currenttrack.pause();
     isplaying = false;
+    const html = `<i class="fas fa-play" style="font-size: 3rem"></i>`;
+    Play.innerHTML = "";
+    Play.insertAdjacentHTML("afterbegin", html);
   }
 });
 
 const playsong = function () {
   for (let j = 0; j < songsofartist.length; j++) {
     if (songsofartist[j].id === currentid) {
-      document.querySelector(".nameofartist").textContent =
+      document.querySelector(".track-artist").textContent =
         songsofartist[j].artistname;
-      document.querySelector(".nameofsong").textContent = songsofartist[j].Song;
-      document.querySelector(".card-image").style.background =
-        "url(" + songsofartist[j].image + ")";
+      document.querySelector(".track-name").textContent = songsofartist[j].Song;
       work(mainsection);
       mainsection.classList.remove("hidden");
       currenttrack.src = songsofartist[j].path;
       currenttrack.play();
+      const html = `<i class="fas fa-pause" style="font-size: 3rem"></i>`;
+      Play.innerHTML = "";
+      Play.insertAdjacentHTML("afterbegin", html);
       isplaying = true;
     }
   }

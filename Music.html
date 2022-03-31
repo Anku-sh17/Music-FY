@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="Music.css" />
     <title>Music-FY</title>
   </head>
@@ -28,27 +32,26 @@
       <a href="#" class="logo">Music-FY</a>
     </header>
 
-    <!-- Main class to disply current song -->
+    <!-- main class for display song -->
     <main class="main hidden">
-      <div class="card">
-        <div class="card-image"></div>
-        <div class="card-text">
-          <span class="date nameofartist">Ed Sheeran</span>
-          <h2 class="nameofsong">Shape of you</h2>
-          <p>
-            This song was writtern by Ed sheeran in 2017. It has crossed more
-            than 6 billion views
-          </p>
+      <div class="player">
+        <!-- Define the section for displaying details -->
+        <div class="details">
+          <div class="track-art"></div>
+          <div class="track-name">Track Name</div>
+          <div class="track-artist">Track Artist</div>
         </div>
-        <div class="card-stats">
-          <div class="stat">
-            <button class="type volume">Volume</button>
+
+        <!-- Define the section for displaying track buttons -->
+        <div class="buttons">
+          <div class="volume-track">
+            <i class="fas fa-music" style="font-size: 2rem"></i>
           </div>
-          <div class="stat border">
-            <button class="type play">Play/Pause</button>
+          <div class="playpause-track">
+            <i class="fas fa-play" style="font-size: 3rem"></i>
           </div>
-          <div class="stat">
-            <button class="type loop">Loop</button>
+          <div class="like-track">
+            <i class="fas fa-heart" style="font-size: 2rem"></i>
           </div>
         </div>
       </div>
@@ -63,89 +66,41 @@
 
     <!-- modal class for top artist -->
     <div class="TopArtist">
-      <div>
-        <img
-          src="https://media.npr.org/assets/img/2020/02/27/wide-use_hpromophoto_helenepambrun-72fdb64792139d94a06f18686d0bb3131a238a70-s1100-c50.jpg"
-          alt=""
-          class="imaf_HarryStyles"
-        />
+      <div class="imaf_HarryStyles">
+        <div class="nameofartistHarry">Harry Styles</div>
       </div>
-      <div>
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Billie_Eilish_2019_by_Glenn_Francis_%28cropped%29_2.jpg/800px-Billie_Eilish_2019_by_Glenn_Francis_%28cropped%29_2.jpg"
-          alt=""
-          class="imaf_BillieEilish"
-        />
+      <div class="imaf_BillieEilish">
+        <div class="nameofartistBillie">Billie Eilish</div>
       </div>
-      <div>
-        <img
-          src="https://st2.depositphotos.com/6694302/9685/i/600/depositphotos_96855090-stock-photo-ed-sheeran-concert.jpg"
-          alt=""
-          class="imaf_EdSheeran"
-        />
+      <div class="imaf_EdSheeran">
+        <div class="nameofartistED">Ed Sheeran</div>
       </div>
-      <div>
-        <img
-          src="https://i.scdn.co/image/ab6761610000e5ebcdce7620dc940db079bf4952"
-          alt=""
-          class="imaf_ArianaGrande"
-        />
+      <div class="imaf_ArianaGrande">
+        <div class="nameofartistAriana">Ariana Grande</div>
       </div>
-      <div>
-        <img
-          src="https://aniportalimages.s3.amazonaws.com/media/details/zayynuuumsdfs2022011512393420220115124425.jpg"
-          alt=""
-          class="imaf_ZyanMalik"
-        />
+      <div class="imaf_ZyanMalik">
+        <div class="nameofartistZyan">Zyan Malik</div>
       </div>
-      <div>
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/9/95/Dua_Lipa_with_Warner_Music.jpg"
-          alt=""
-          class="imaf_DuaLipa"
-        />
+      <div class="imaf_DuaLipa">
+        <div class="nameofartistDua">Dua Lipa</div>
       </div>
-      <div>
-        <img
-          src="https://i1.sndcdn.com/avatars-000500544273-6kcyh0-t500x500.jpg"
-          alt=""
-          class="imaf_TaylorSwift"
-        />
+      <div class="imaf_TaylorSwift">
+        <div class="nameofartistTaylor">Taylor Swift</div>
       </div>
-      <div>
-        <img
-          src="https://pyxis.nymag.com/v1/imgs/c10/524/1853b57c011cf5fd8ebc8f4b149345d5d3-BTS-JOIN-LOUIS-VUITTON-AS-HOUSE-AMBASSAD.rsquare.w1200.jpg"
-          alt=""
-          class="imaf_BTS"
-        />
+      <div class="imaf_BTS">
+        <div class="nameofartistBTS">BTS</div>
       </div>
-      <div>
-        <img
-          src="https://media.gq.com/photos/56bcb218cdf2db6945d2ef93/4:3/w_2000,h_1500,c_limit/bieber-coverstory-square.jpg"
-          alt=""
-          class="imaf_JustinBieber"
-        />
+      <div class="imaf_JustinBieber">
+        <div class="nameofartistJustin">Justin Bieber</div>
       </div>
-      <div>
-        <img
-          src="https://yt3.ggpht.com/QTpsceScLWmzgZXO6lPJo-s0CzCaGoat2S8PZzfdKtvqJTUh7jCLtYvCPH1RbUzVCOz2t_RIqIA=s900-c-k-c0x00ffffff-no-rj"
-          alt=""
-          class="imaf_ShawnMendes"
-        />
+      <div class="imaf_ShawnMendes">
+        <div class="nameofartistShwan">Shawn Mendes</div>
       </div>
-      <div>
-        <img
-          src="https://m.media-amazon.com/images/M/MV5BMjAwNTE2MDMyMl5BMl5BanBnXkFtZTgwMjAyODM3MTI@._V1_UY1200_CR134,0,630,1200_AL_.jpg"
-          alt=""
-          class="imaf_SelenaGomes"
-        />
+      <div class="imaf_SelenaGomes">
+        <div class="nameofartistSelena">Selena Gomes</div>
       </div>
-      <div>
-        <img
-          src="https://img.i-scmp.com/cdn-cgi/image/fit=contain,width=1098,format=auto/sites/default/files/styles/1200x800/public/d8/images/methode/2020/10/16/41e9b47c-07af-11eb-afc8-92e0da0ef1c3_image_hires_155550.jpg?itok=ihKswLDq&v=1602834958"
-          alt=""
-          class="imaf_Blackpink"
-        />
+      <div class="imaf_Blackpink">
+        <div class="nameofartistBlackpink">BlackPink</div>
       </div>
     </div>
     <!-- modal class when user click on top artist -->
@@ -153,29 +108,28 @@
     <!-- modal class for trending -->
     <div class="Trending-display hidden">
       <div class="trending1">
-        <div>1</div>
-        <div>Watermelon Sugar</div>
-        <div>Harry styles</div>
+        <div style="font-size: 2rem">Watermelon Sugar</div>
+        <div style="font-size: 1.3rem">Harry styles</div>
+        <i class="fas fa-play" style="font-size: 1.5rem"></i>
+        <i class="fas fa-trash" style="font-size: 1.5rem"></i>
       </div>
       <div class="trending1">
-        <div>2</div>
-        <div>Treat you better</div>
-        <div>Shawn Mendes</div>
+        <div style="font-size: 2rem">Treat you better</div>
+        <div style="font-size: 1.3rem">Shawn Mendes</div>
+        <i class="fas fa-play" style="font-size: 1.5rem"></i>
+        <i class="fas fa-trash" style="font-size: 1.5rem"></i>
       </div>
       <div class="trending1">
-        <div>3</div>
-        <div>Lovely</div>
-        <div>Billie Eilish</div>
+        <div style="font-size: 2rem">Lovely</div>
+        <div style="font-size: 1.3rem">Billie Eilish</div>
+        <i class="fas fa-play" style="font-size: 1.5rem"></i>
+        <i class="fas fa-trash" style="font-size: 1.5rem"></i>
       </div>
       <div class="trending1">
-        <div>4</div>
-        <div>Dance for the moon</div>
-        <div>Lil nax</div>
-      </div>
-      <div class="trending1">
-        <div>5</div>
-        <div>Positions</div>
-        <div>Ariana Grande</div>
+        <div style="font-size: 2rem">Dance for the moon</div>
+        <div style="font-size: 1.3rem">Lil nax</div>
+        <i class="fas fa-play" style="font-size: 1.5rem"></i>
+        <i class="fas fa-trash" style="font-size: 1.5rem"></i>
       </div>
     </div>
   </body>
