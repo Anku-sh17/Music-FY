@@ -10,6 +10,12 @@ const TopArtistsection = document.querySelector(".TopArtist");
 const Trendingsection = document.querySelector(".Trending-display");
 const mainsection = document.querySelector(".main");
 
+// each artists section
+// const harrysection = document.querySelector(".harrywrap");
+// const billiesection = document.querySelector(".billiewrap");
+// const edsheeransection = document.querySelector(".edsheeranwrap");
+// const arianasection = document.querySelector(".arianawrap");
+
 // Music Card buttons
 const Play = document.querySelector(".playpause-track");
 const volume = document.querySelector(".volume-track");
@@ -28,23 +34,59 @@ const justinbieber = document.querySelector(".imaf_JustinBieber");
 const shawnmendes = document.querySelector(".imaf_ShawnMendes");
 const selenagomez = document.querySelector(".imaf_SelenaGomes");
 const blackpink = document.querySelector(".imaf_Blackpink");
+const allimages = document.querySelector(".imafx");
 
 // Artist Name Buttons
-const nameofartistharrystyles = document.querySelector(".nameofartistHarry");
-const nameofartistBillieEilish = document.querySelector(".nameofartistBillie");
-const nameofartistedsheeran = document.querySelector(".nameofartistED");
-const nameofartistarianagrande = document.querySelector(".nameofartistAriana");
-const nameofartistzyanmalik = document.querySelector(".nameofartistZyan");
-const nameofartistdualipa = document.querySelector(".nameofartistDua");
-const nameofartisttaylorswift = document.querySelector(".nameofartistTaylor");
-const nameofartistbts = document.querySelector(".nameofartistBTS");
-const nameofartistjustinbieber = document.querySelector(".nameofartistJustin");
-const nameofartistshawnmendes = document.querySelector(".nameofartistShwan");
-const nameofartistselenagomez = document.querySelector(".nameofartistSelena");
-const nameofartistblackpink = document.querySelector(".nameofartistBlackpink");
+const playlistharrywrap = document.querySelector(".harrywrap");
+const playlistartistbilliewrap = document.querySelector(".billiewrap");
+const playlistsheeranwrap = document.querySelector(".sheeranwrap");
+const playlistarianawrap = document.querySelector(".arianawrap");
+const playlistzyanwrap = document.querySelector(".zyanwrap");
+const playlistduawrap = document.querySelector(".duawrap");
+const playlisttaylorwrap = document.querySelector(".taylorwrap");
+const playlistbtswrap = document.querySelector(".btswrap");
+const playlistjustinwrap = document.querySelector(".justinwrap");
+const playlistshawnwrap = document.querySelector(".shawnwrap");
+const playlistselenawrap = document.querySelector(".selenawrap");
+const playlistblackpinkwrap = document.querySelector(".blackpinkwrap");
+
+// loadingbutton
+const contents = document.querySelector(".contents");
+const loader = document.querySelector(".loader");
+
+// favorites button
+const playfav = document.querySelector(".playfavtrack");
+
+//loader
+// const start = function () {
+//   contents.classList.remove("hidden");
+//   loader.classList.add("hidden");
+// };
+
+// window.onload = (e) => {
+//   setTimeout(start, 3000);
+// };
 
 // Navigation Bar switching
-const sections = [Aboutsection, TopArtistsection, Trendingsection, mainsection];
+
+const sections = [
+  Aboutsection,
+  TopArtistsection,
+  Trendingsection,
+  mainsection,
+  playlistharrywrap,
+  playlistarianawrap,
+  playlistartistbilliewrap,
+  playlistblackpinkwrap,
+  playlistbtswrap,
+  playlistduawrap,
+  playlistjustinwrap,
+  playlistselenawrap,
+  playlistshawnwrap,
+  playlistsheeranwrap,
+  playlisttaylorwrap,
+  playlistzyanwrap,
+];
 
 const work = function (sec) {
   for (let i = 0; i < sections.length; i++) {
@@ -76,6 +118,7 @@ trending.addEventListener("click", function () {
 
 // Music Playing
 
+/*
 let songsofartist = [
   {
     artistname: "Ed-sheeran",
@@ -172,10 +215,12 @@ let songsofartist = [
     id: 12,
   },
 ];
+*/
 
 let isplaying = false;
 let currentid = 0;
 let currenttrack = document.createElement("audio");
+let currenttrend = 1;
 
 const songcards = [
   edsheeran,
@@ -191,20 +236,36 @@ const songcards = [
   selenagomez,
   blackpink,
 ];
-const songartist = [
-  nameofartistedsheeran,
-  nameofartistzyanmalik,
-  nameofartistBillieEilish,
-  nameofartistarianagrande,
-  nameofartistharrystyles,
-  nameofartistdualipa,
-  nameofartisttaylorswift,
-  nameofartistbts,
-  nameofartistjustinbieber,
-  nameofartistshawnmendes,
-  nameofartistselenagomez,
-  nameofartistblackpink,
+
+const eachplaylist = [
+  playlistsheeranwrap,
+  playlistzyanwrap,
+  playlistartistbilliewrap,
+  playlistarianawrap,
+  playlistharrywrap,
+  playlistduawrap,
+  playlisttaylorwrap,
+  playlistbtswrap,
+  playlistjustinwrap,
+  playlistshawnwrap,
+  playlistselenawrap,
+  playlistblackpinkwrap,
 ];
+
+// const songartist = [
+//   nameofartistedsheeran,
+//   nameofartistzyanmalik,
+//   nameofartistBillieEilish,
+//   nameofartistarianagrande,
+//   nameofartistharrystyles,
+//   nameofartistdualipa,
+//   nameofartisttaylorswift,
+//   nameofartistbts,
+//   nameofartistjustinbieber,
+//   nameofartistshawnmendes,
+//   nameofartistselenagomez,
+//   nameofartistblackpink,
+// ];
 
 like.addEventListener("click", function () {
   let songname;
@@ -215,12 +276,21 @@ like.addEventListener("click", function () {
       artname = m.artistname;
     }
   });
-  const html = `<div class="trending1">
+  const html = `<div class="trending${currenttrend}">
   <div style="font-size: 2rem">${songname}</div>
   <div style="font-size: 1.3rem">${artname}</div>
+  <div class ="playfavtrack">
   <i class="fas fa-play" style="font-size: 1.5rem"></i>
+  </div>
+  <div class ="delfavtrack">
   <i class="fas fa-trash" style="font-size: 1.5rem"></i>
+  </div>
 </div>`;
+  if (currenttrend == 2) {
+    currenttrend = 1;
+  } else {
+    currenttrend = 2;
+  }
   Trendingsection.insertAdjacentHTML("afterbegin", html);
 });
 
@@ -261,6 +331,8 @@ const playsong = function () {
 for (let i = 0; i < songcards.length; i++) {
   songcards[i].addEventListener("click", function () {
     currentid = i + 1;
-    playsong();
+    work(eachplaylist[i]);
+    eachplaylist[i].classList.remove("hidden");
+    // playsong();
   });
 }

@@ -12,125 +12,840 @@
     <title>Music-FY</title>
   </head>
   <body>
-    <header>
-      <nav>
-        <ul class="nav_links">
-          <li>
-            <a href="#" class="Home">Home</a>
-          </li>
-          <li>
-            <a href="#" class="About">About</a>
-          </li>
-          <li>
-            <a href="#" class="TopA">Top Artists</a>
-          </li>
-          <li>
-            <a href="#" class="Trending">Trending</a>
-          </li>
-        </ul>
-      </nav>
-      <a href="#" class="logo">Music-FY</a>
-    </header>
+    <!-- login page -->
 
-    <!-- main class for display song -->
-    <main class="main hidden">
-      <div class="player">
-        <!-- Define the section for displaying details -->
-        <div class="details">
-          <div class="track-art"></div>
-          <div class="track-name">Track Name</div>
-          <div class="track-artist">Track Artist</div>
-        </div>
-
-        <!-- Define the section for displaying track buttons -->
-        <div class="buttons">
-          <div class="volume-track">
-            <i class="fas fa-music" style="font-size: 2rem"></i>
-          </div>
-          <div class="playpause-track">
-            <i class="fas fa-play" style="font-size: 3rem"></i>
-          </div>
-          <div class="like-track">
-            <i class="fas fa-heart" style="font-size: 2rem"></i>
-          </div>
-        </div>
-      </div>
-    </main>
-
-    <!-- Modal class for about section -->
-
-    <div class="About-display hidden">
-      <h1>this site is made by ankush gupta</h1>
-    </div>
-    <div class="overlay hidden"></div>
-
-    <!-- modal class for top artist -->
-    <div class="TopArtist">
-      <div class="imaf_HarryStyles">
-        <div class="nameofartistHarry">Harry Styles</div>
-      </div>
-      <div class="imaf_BillieEilish">
-        <div class="nameofartistBillie">Billie Eilish</div>
-      </div>
-      <div class="imaf_EdSheeran">
-        <div class="nameofartistED">Ed Sheeran</div>
-      </div>
-      <div class="imaf_ArianaGrande">
-        <div class="nameofartistAriana">Ariana Grande</div>
-      </div>
-      <div class="imaf_ZyanMalik">
-        <div class="nameofartistZyan">Zyan Malik</div>
-      </div>
-      <div class="imaf_DuaLipa">
-        <div class="nameofartistDua">Dua Lipa</div>
-      </div>
-      <div class="imaf_TaylorSwift">
-        <div class="nameofartistTaylor">Taylor Swift</div>
-      </div>
-      <div class="imaf_BTS">
-        <div class="nameofartistBTS">BTS</div>
-      </div>
-      <div class="imaf_JustinBieber">
-        <div class="nameofartistJustin">Justin Bieber</div>
-      </div>
-      <div class="imaf_ShawnMendes">
-        <div class="nameofartistShwan">Shawn Mendes</div>
-      </div>
-      <div class="imaf_SelenaGomes">
-        <div class="nameofartistSelena">Selena Gomes</div>
-      </div>
-      <div class="imaf_Blackpink">
-        <div class="nameofartistBlackpink">BlackPink</div>
+    <div class="loader hidden">
+      <h2>Welcome</h2>
+      <br />
+      <div class="login">
+        <form id="login" method="get" action="login.php">
+          <label><b>User Name </b> </label>
+          <input type="text" name="Uname" id="Uname" placeholder="Username" />
+          <br /><br />
+          <label><b>Password </b> </label>
+          <input type="Password" name="Pass" id="Pass" placeholder="Password" />
+          <br /><br /><br />
+          <input type="button" name="log" id="log" value="Log In Here" />
+          <br /><br />
+          <input type="checkbox" id="check" />
+          <span>Remember me</span>
+          <br /><br />
+        </form>
       </div>
     </div>
-    <!-- modal class when user click on top artist -->
+    <div class="contents">
+      <header>
+        <nav>
+          <ul class="nav_links">
+            <li>
+              <a href="#" class="Home">Home</a>
+            </li>
+            <li>
+              <a href="#" class="About">About</a>
+            </li>
+            <li>
+              <a href="#" class="TopA">Top Artists</a>
+            </li>
+            <li>
+              <a href="#" class="Trending">Trending</a>
+            </li>
+          </ul>
+        </nav>
+        <a href="#" class="logo">Music-FY</a>
+      </header>
 
-    <!-- modal class for trending -->
-    <div class="Trending-display hidden">
-      <div class="trending1">
-        <div style="font-size: 2rem">Watermelon Sugar</div>
-        <div style="font-size: 1.3rem">Harry styles</div>
-        <i class="fas fa-play" style="font-size: 1.5rem"></i>
-        <i class="fas fa-trash" style="font-size: 1.5rem"></i>
+      <!-- main class for display song -->
+      <main class="main">
+        <div class="player">
+          <!-- Define the section for displaying details -->
+          <div class="details">
+            <div class="track-art"></div>
+            <div class="track-name">Track Name</div>
+            <div class="track-artist">Track Artist</div>
+          </div>
+
+          <!-- Define the section for displaying track buttons -->
+          <div class="buttons">
+            <div class="volume-track">
+              <i class="fas fa-music" style="font-size: 2rem"></i>
+            </div>
+            <div class="playpause-track">
+              <i class="fas fa-play" style="font-size: 3rem"></i>
+            </div>
+            <div class="like-track">
+              <i class="fas fa-heart" style="font-size: 2rem"></i>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Modal class for about section -->
+
+      <div class="About-display hidden">
+        <h1>this site is made by ankush gupta</h1>
       </div>
-      <div class="trending1">
-        <div style="font-size: 2rem">Treat you better</div>
-        <div style="font-size: 1.3rem">Shawn Mendes</div>
-        <i class="fas fa-play" style="font-size: 1.5rem"></i>
-        <i class="fas fa-trash" style="font-size: 1.5rem"></i>
+
+      <!-- modal class for top artist -->
+      <div class="TopArtist hidden">
+        <div class="grid-container">
+          <img
+            class="imafx imaf_EdSheeran"
+            src="https://st2.depositphotos.com/6694302/9685/i/600/depositphotos_96855090-stock-photo-ed-sheeran-concert.jpg"
+            alt=""
+          />
+          <p class="artistname">ED-Sheeran</p>
+        </div>
+        <div class="grid-container">
+          <img
+            class="imafx imaf_BillieEilish"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Billie_Eilish_2019_by_Glenn_Francis_%28cropped%29_2.jpg/800px-Billie_Eilish_2019_by_Glenn_Francis_%28cropped%29_2.jpg"
+            alt=""
+          />
+          <p class="artistname">Billie Eillish</p>
+        </div>
+        <div class="grid-container">
+          <img
+            class="imafx imaf_HarryStyles"
+            src="https://media.npr.org/assets/img/2020/02/27/wide-use_hpromophoto_helenepambrun-72fdb64792139d94a06f18686d0bb3131a238a70-s1100-c50.jpg"
+            alt=""
+          />
+          <p class="artistname">Harry Styles</p>
+        </div>
+        <div class="grid-container">
+          <img
+            class="imafx imaf_ArianaGrande"
+            src="https://i.scdn.co/image/ab6761610000e5ebcdce7620dc940db079bf4952"
+            alt=""
+          />
+          <p class="artistname">Ariana Grande</p>
+        </div>
+        <div class="grid-container">
+          <img
+            class="imafx imaf_ZyanMalik"
+            src="https://st2.depositphotos.com/1694341/5893/i/950/depositphotos_58935501-stock-photo-zayn-malik.jpg"
+            alt=""
+          />
+          <p class="artistname">Zyan Malik</p>
+        </div>
+        <div class="grid-container">
+          <img
+            class="imafx imaf_Blackpink"
+            src="https://img.i-scmp.com/cdn-cgi/image/fit=contain,width=1098,format=auto/sites/default/files/styles/1200x800/public/d8/images/methode/2020/10/16/41e9b47c-07af-11eb-afc8-92e0da0ef1c3_image_hires_155550.jpg?itok=ihKswLDq&v=1602834958"
+            alt=""
+          />
+          <p class="artistname">BlackPink</p>
+        </div>
+
+        <div class="grid-container">
+          <img
+            class="imafx imaf_TaylorSwift"
+            src="https://i1.sndcdn.com/avatars-000500544273-6kcyh0-t500x500.jpg"
+            alt=""
+          />
+          <p class="artistname">Taylor Swift</p>
+        </div>
+        <div class="grid-container">
+          <img
+            class="imafx imaf_BTS"
+            src="https://pyxis.nymag.com/v1/imgs/c10/524/1853b57c011cf5fd8ebc8f4b149345d5d3-BTS-JOIN-LOUIS-VUITTON-AS-HOUSE-AMBASSAD.rsquare.w1200.jpg"
+            alt=""
+          />
+          <p class="artistname">BTS</p>
+        </div>
+        <div class="grid-container">
+          <img
+            class="imafx imaf_JustinBieber"
+            src="https://media.gq.com/photos/56bcb218cdf2db6945d2ef93/4:3/w_2000,h_1500,c_limit/bieber-coverstory-square.jpg"
+            alt=""
+          />
+          <p class="artistname">Justin Bieber</p>
+        </div>
+        <div class="grid-container">
+          <img
+            class="imafx imaf_ShawnMendes"
+            src="https://yt3.ggpht.com/QTpsceScLWmzgZXO6lPJo-s0CzCaGoat2S8PZzfdKtvqJTUh7jCLtYvCPH1RbUzVCOz2t_RIqIA=s900-c-k-c0x00ffffff-no-rj"
+            alt=""
+          />
+          <p class="artistname">Shawn Mendes</p>
+        </div>
+        <div class="grid-container">
+          <img
+            class="imafx imaf_SelenaGomes"
+            src="https://wwd.com/wp-content/uploads/2021/10/Selena-Gomez-01.jpg?crop=0px%2C208px%2C905px%2C507px&resize=910%2C511"
+            alt=""
+          />
+          <p class="artistname">Selena Gomes</p>
+        </div>
+        <div class="grid-container">
+          <img
+            class="imafx imaf_DuaLipa"
+            src="https://upload.wikimedia.org/wikipedia/commons/9/95/Dua_Lipa_with_Warner_Music.jpg"
+            alt=""
+          />
+          <p class="artistname">Dua Lipa</p>
+        </div>
       </div>
-      <div class="trending1">
-        <div style="font-size: 2rem">Lovely</div>
-        <div style="font-size: 1.3rem">Billie Eilish</div>
-        <i class="fas fa-play" style="font-size: 1.5rem"></i>
-        <i class="fas fa-trash" style="font-size: 1.5rem"></i>
+      <!-- modal class when user click on top artist -->
+      <div class="wrapper harrywrap hidden">
+        <div class="gallery">
+          <ul>
+            <li class="AsItWas">
+              <img
+                src="https://static.stereogum.com/uploads/2022/03/unnamed-2-1648767754.jpg"
+              />
+            </li>
+            <li class="WatermelonSugar">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/en/b/bf/Watermelon_Sugar_-_Harry_Styles.png"
+              />
+            </li>
+            <li class="Golden">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/en/thumb/c/ce/Harry_Styles_-_Golden.png/220px-Harry_Styles_-_Golden.png"
+              />
+            </li>
+            <li class="AdoreYou">
+              <img
+                src="https://i1.sndcdn.com/artworks-L8pQNsEe4uxy3pxT-DOZcVg-t500x500.jpg"
+              />
+            </li>
+            <li class="SignOfTimes">
+              <img
+                src="https://i1.sndcdn.com/artworks-000222406898-45pjxv-t500x500.jpg"
+              />
+            </li>
+            <li class="Falling">
+              <img
+                src="https://images.genius.com/ee79ab59275d25a69a5430f3db9c26f8.600x600x1.jpg"
+              />
+            </li>
+            <li class="LightsUp">
+              <img
+                src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/f6c6e887583983.5dbc6326c7d62.jpg"
+              />
+            </li>
+            <li class="FineLine">
+              <img
+                src="https://i.pinimg.com/736x/85/48/cb/8548cbe6eeb8bf245a504c6c72b41263.jpg"
+              />
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="trending1">
-        <div style="font-size: 2rem">Dance for the moon</div>
-        <div style="font-size: 1.3rem">Lil nax</div>
-        <i class="fas fa-play" style="font-size: 1.5rem"></i>
-        <i class="fas fa-trash" style="font-size: 1.5rem"></i>
+      <div class="wrapper billiewrap hidden">
+        <div class="gallery">
+          <ul>
+            <li class="Lovely">
+              <img
+                src="https://pics.filmaffinity.com/Billie_Eilish_feat_Khalid_Lovely_Music_Video-730519693-large.jpg"
+              />
+            </li>
+            <li class="BadGuy">
+              <img
+                src="https://i1.sndcdn.com/artworks-000584234423-y1fg41-t500x500.jpg"
+              />
+            </li>
+            <li class="ILoveYou">
+              <img
+                src="https://i0.wp.com/tranceattack.net/wordpress/wp-content/uploads/2020/10/Billie-Eilish-I-Love-You-Myon-Remix.jpg?fit=2048%2C2048&ssl=1"
+              />
+            </li>
+            <li class="TherforeIAm">
+              <img
+                src="https://i1.sndcdn.com/artworks-zeqOX1wnHxaLXpvy-HLHQYA-t500x500.jpg"
+              />
+            </li>
+            <li class="Bored">
+              <img
+                src="https://i1.sndcdn.com/artworks-000478712280-mvnaos-t500x500.jpg"
+              />
+            </li>
+            <li class="HappierThanEver">
+              <img
+                src="https://i1.sndcdn.com/artworks-Qy4h0dOBCUiyJKRK-Q8DYRg-t500x500.jpg"
+              />
+            </li>
+            <li class="OceanEyes">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/en/a/a2/Ocean_Eyes_%28Official_Single_Cover%29_by_Billie_Eilish.png"
+              />
+            </li>
+            <li class="WhenTheParty'sOver">
+              <img
+                src="https://i.pinimg.com/originals/2d/c2/a6/2dc2a655be1a4262e5c510f6ec435888.png"
+              />
+            </li>
+            <li class="CopyCat">
+              <img
+                src="http://pm1.narvii.com/6925/70c77c1facf00fa7267e1ce11dcbb1fa011f3a9er1-720-751v2_uhq.jpg"
+              />
+            </li>
+            <li class="Hostage">
+              <img
+                src="https://i1.sndcdn.com/artworks-000299189751-qxjzzm-t500x500.jpg"
+              />
+            </li>
+          </ul>
+        </div>
       </div>
+      <div class="wrapper sheeranwrap hidden">
+        <div class="gallery">
+          <ul>
+            <li class="ShapeOfYou">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/en/b/b4/Shape_Of_You_%28Official_Single_Cover%29_by_Ed_Sheeran.png"
+              />
+            </li>
+            <li class="Perfect">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/en/thumb/9/93/Ed_Sheeran_%26_Andrea_Bocelli_-_Perfect_Symphony.jpg/220px-Ed_Sheeran_%26_Andrea_Bocelli_-_Perfect_Symphony.jpg"
+              />
+            </li>
+            <li class="Shivers">
+              <img
+                src="https://i1.sndcdn.com/artworks-N6gZkDTVKf0kMeV8-dRivXA-t500x500.jpg"
+              />
+            </li>
+            <li class="BadHabits">
+              <img
+                src="https://pics.filmaffinity.com/ed_sheeran_bad_habits-532452908-large.jpg"
+              />
+            </li>
+            <li class="CastleOnHill">
+              <img
+                src="https://i1.sndcdn.com/artworks-000323945972-ok58e1-t500x500.jpg"
+              />
+            </li>
+            <li class="Peru">
+              <img
+                src="https://i1.sndcdn.com/artworks-4v6gmwj3Dayld5Qa-yKYnzw-t500x500.jpg"
+              />
+            </li>
+            <li class="IDon'tCare">
+              <img
+                src="https://images.squarespace-cdn.com/content/v1/58ab2fce20099e7487a18b2a/1557735935151-L5LQZEMUW1OR4ITPFYCM/I+DONT+CARE+BETTER+C.jpg?format=1500w"
+              />
+            </li>
+            <li class="2Steps">
+              <img
+                src="https://i1.sndcdn.com/artworks-ejYVoyCCsbVS0Faq-46zb0g-t500x500.jpg"
+              />
+            </li>
+            <li class="ISeeFire">
+              <img
+                src="https://i1.sndcdn.com/artworks-000150148030-rd8i2n-t500x500.jpg"
+              />
+            </li>
+            <li class="BeautifulPeople">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Ed_Sheeran_-_Beautiful_People.png"
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="wrapper arianawrap hidden">
+        <div class="gallery">
+          <ul>
+            <li class="7Rings">
+              <img src="https://i.ytimg.com/vi/M84fFXooS5w/mqdefault.jpg" />
+            </li>
+            <li class="BangBang">
+              <img
+                src="https://c-fa.cdn.smule.com/rs-s77/arr/a9/71/685f0b6d-8e03-4b69-95b5-cac9596437a8.jpg"
+              />
+            </li>
+            <li class="ThankYouNext">
+              <img
+                src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ce23892c-62a3-4bbb-a740-c00063d4c2b3/de2lgbz-61ea61a9-8153-4638-8357-2e74301cfb6d.jpg/v1/fill/w_1920,h_1920,q_75,strp/ariana_grande___thank_u__next_fanmade_cover_2_by_fnmadejapanesecovers_de2lgbz-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTkyMCIsInBhdGgiOiJcL2ZcL2NlMjM4OTJjLTYyYTMtNGJiYi1hNzQwLWMwMDA2M2Q0YzJiM1wvZGUybGdiei02MWVhNjFhOS04MTUzLTQ2MzgtODM1Ny0yZTc0MzAxY2ZiNmQuanBnIiwid2lkdGgiOiI8PTE5MjAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.d51pSnjF5wRGtixvvJ61jFGxkqU7ISent5LraP0lHtA"
+              />
+            </li>
+            <li class="Positions">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNo0OUwecw3VEWEnP4zuUFSkY-Y6Vp9BypJg&usqp=CAU"
+              />
+            </li>
+            <li class="SidetoSide">
+              <img
+                src="https://m.media-amazon.com/images/M/MV5BZWFhZWQzZTEtOGYyYy00NDY4LWI1NDktNjVlMzM4NWYxYmY0XkEyXkFqcGdeQXVyNzE5MjU4MDM@._V1_FMjpg_UX1000_.jpg"
+              />
+            </li>
+            <li class="34+35">
+              <img
+                src="https://i.pinimg.com/originals/18/90/6e/18906e258098a308cc26a0d48cee6b31.jpg"
+              />
+            </li>
+            <li class="StuckWithYou">
+              <img
+                src="https://i.pinimg.com/736x/ca/e3/a6/cae3a6f72f5d88ed5dc80ee5904cb6e5.jpg"
+              />
+            </li>
+            <li class="GodIsAWomen">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/en/7/77/God_Is_a_Woman_single_cover.png"
+              />
+            </li>
+            <li class="OneLastTime">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/en/7/76/Ariana_Grande_One_Last_Time_Cover.png"
+              />
+            </li>
+            <li class="IntoYou">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/en/7/74/Into_You_Ariana_Grande_cover.png"
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="wrapper zyanwrap hidden">
+        <div class="gallery">
+          <ul>
+            <li class="DuskTillDawn">
+              <img
+                src="https://i1.sndcdn.com/artworks-000654575725-b51jvm-t500x500.jpg"
+              />
+            </li>
+            <li class="NightChanges">
+              <img
+                src="data:image/jpeg;base64,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"
+              />
+            </li>
+            <li class="StoryOfMyLife">
+              <img
+                src="https://i1.sndcdn.com/artworks-000069038287-5r45jj-t500x500.jpg"
+              />
+            </li>
+            <li class="WhatMakesYouBeautiful">
+              <img
+                src="https://i1.sndcdn.com/artworks-000218054713-2hngbp-t500x500.jpg"
+              />
+            </li>
+            <li class="StealMyGirl">
+              <img
+                src="https://mtv.mtvnimages.com/uri/mgid:ao:image:mtv.com:126090?quality=0.8&format=jpg&width=1440&height=810&.jpg"
+              />
+            </li>
+            <li class="You&I">
+              <img
+                src="https://i1.sndcdn.com/artworks-000083002541-6qqb1v-t500x500.jpg"
+              />
+            </li>
+            <li class="BestSongEver">
+              <img
+                src="https://i1.sndcdn.com/artworks-000144372998-i6pk8u-t500x500.jpg"
+              />
+            </li>
+            <li class="LittleThings">
+              <img
+                src="https://i1.sndcdn.com/artworks-000084002762-lzqtsw-t500x500.jpg"
+              />
+            </li>
+            <li class="WalkingInWinds">
+              <img
+                src="https://i1.sndcdn.com/artworks-000157825442-4np0fk-t500x500.jpg"
+              />
+            </li>
+            <li class="LastFirstKiss">
+              <img
+                src="https://i1.sndcdn.com/artworks-000083011359-535r8e-t500x500.jpg"
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="wrapper duawrap hidden">
+        <div class="gallery">
+          <ul>
+            <li class="Levitating">
+              <img
+                src="https://i.pinimg.com/originals/dc/64/11/dc64114f625914d3683959cb0de7313a.jpg"
+              />
+            </li>
+            <li class="ColdHeart">
+              <img
+                src="https://i.scdn.co/image/ab67616d0000b2732e66dd139028dda0628e9a3d"
+              />
+            </li>
+            <li class="KissAndMakeup">
+              <img
+                src="https://i1.sndcdn.com/artworks-000427439451-g6k2o4-t500x500.jpg"
+              />
+            </li>
+            <li class="Don'tStartNow">
+              <img
+                src="https://i1.sndcdn.com/artworks-000634663558-2q7svb-t500x500.jpg"
+              />
+            </li>
+            <li class="NewRules">
+              <img
+                src="https://i1.sndcdn.com/artworks-000274800965-cbw1ss-t500x500.jpg"
+              />
+            </li>
+            <li class="OneKiss">
+              <img
+                src="https://m.media-amazon.com/images/I/A1O-sGKe7-L._SX522_.jpg"
+              />
+            </li>
+            <li class="LoveAgain">
+              <img
+                src="https://i1.sndcdn.com/artworks-vJb1d95QR7m7bJ6W-dymI2g-t500x500.jpg"
+              />
+            </li>
+            <li class="BeTheOne">
+              <img
+                src="https://i1.sndcdn.com/artworks-000493525770-6tw1ti-t500x500.jpg"
+              />
+            </li>
+            <li class="Fever">
+              <img
+                src="https://express-images.franklymedia.com/3745/sites/5/2019/05/14150800/IMG_5617.jpg"
+              />
+            </li>
+            <li class="IDGAF">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e7/IDGAF_cover.png/220px-IDGAF_cover.png"
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="wrapper taylorwrap hidden">
+        <div class="gallery">
+          <ul>
+            <li class="BlankSpace">
+              <img
+                src="https://i1.sndcdn.com/artworks-000131714331-p1sy5c-t500x500.jpg"
+              />
+            </li>
+            <li class="BadBlood">
+              <img
+                src="https://compote.slate.com/images/5e126562-0626-408c-a161-52d5f1892172.jpg"
+              />
+            </li>
+            <li class="LoveStory">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/en/0/01/Taylor_Swift_-_Love_Story.png"
+              />
+            </li>
+            <li class="AllTooWell">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/en/thumb/6/69/All_Too_Well_short_film_poster.jpg/220px-All_Too_Well_short_film_poster.jpg"
+              />
+            </li>
+            <li class="YouBelongWithMe">
+              <img
+                src="https://i.scdn.co/image/ab67616d0000b273c7f708707bfae35383ef7064"
+              />
+            </li>
+            <li class="WildestDream">
+              <img
+                src="https://i1.sndcdn.com/artworks-000133668002-xloo24-t500x500.jpg"
+              />
+            </li>
+            <li class="ShakeItOff">
+              <img
+                src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4a807e36-83a4-4f86-a048-341e9d4c19d5/d84qxgg-4e1a1db4-e9c7-4a99-ae27-1a2695eda277.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzRhODA3ZTM2LTgzYTQtNGY4Ni1hMDQ4LTM0MWU5ZDRjMTlkNVwvZDg0cXhnZy00ZTFhMWRiNC1lOWM3LTRhOTktYWUyNy0xYTI2OTVlZGEyNzcucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.oO-6OPUKcWPruwNZX2We4F2qrFKnNyGKI-yvM0d4mWA"
+              />
+            </li>
+            <li class="ME">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/en/0/01/Taylor_Swift_-_Me%21.png"
+              />
+            </li>
+            <li class="Delicate">
+              <img
+                src="https://i1.sndcdn.com/artworks-000350238657-q4i29f-t500x500.jpg"
+              />
+            </li>
+            <li class="Lover">
+              <img
+                src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/49b8eb84-0644-42ca-b22f-3a1208e2aa98/ddiulc3-4e00352f-2724-47da-94cb-8cf91e7f2982.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ5YjhlYjg0LTA2NDQtNDJjYS1iMjJmLTNhMTIwOGUyYWE5OFwvZGRpdWxjMy00ZTAwMzUyZi0yNzI0LTQ3ZGEtOTRjYi04Y2Y5MWU3ZjI5ODIuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.8sut4M1hgfzLno9NVgBUqR01m5O3a8oNGZx3sSB3o0M"
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="wrapper btswrap hidden">
+        <div class="gallery">
+          <ul>
+            <li class="Dynamite">
+              <img
+                src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/633ecabc-f3f4-401a-9d1e-2c2ec01c86e0/de3oi68-6481b488-b2fb-40f0-8e5d-0c899413a7ee.jpg/v1/fill/w_1280,h_1280,q_75,strp/bts_dynamite_album_cover_by_sivan67_de3oi68-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcLzYzM2VjYWJjLWYzZjQtNDAxYS05ZDFlLTJjMmVjMDFjODZlMFwvZGUzb2k2OC02NDgxYjQ4OC1iMmZiLTQwZjAtOGU1ZC0wYzg5OTQxM2E3ZWUuanBnIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.l5-Vz56Cx1JnkiQ5OLvWHDXLGfGB3Wf5-teW1oAL1lk"
+              />
+            </li>
+            <li class="Butter">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/en/d/db/BTS_-_Butter.png"
+              />
+            </li>
+            <li class="PermissionToDance">
+              <img
+                src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/633ecabc-f3f4-401a-9d1e-2c2ec01c86e0/derrfkl-695fa7c7-98bc-45d2-a7ff-dc998daa258f.jpg/v1/fill/w_1280,h_1280,q_75,strp/bts_permission_to_dance_album_cover_by_sivan67_derrfkl-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcLzYzM2VjYWJjLWYzZjQtNDAxYS05ZDFlLTJjMmVjMDFjODZlMFwvZGVycmZrbC02OTVmYTdjNy05OGJjLTQ1ZDItYTdmZi1kYzk5OGRhYTI1OGYuanBnIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.gVbNWgDVrfxsOawq3YnHIwcDsraWvOvOoYTWaVX8IPU"
+              />
+            </li>
+            <li class="BoyWothLuv">
+              <img
+                src="https://i1.sndcdn.com/artworks-cJhzdvRT8aUQ3fY1-yglEKg-t500x500.jpg"
+              />
+            </li>
+            <li class="Idol">
+              <img
+                src="https://i.pinimg.com/originals/bc/a4/f8/bca4f8db56700677c0c5dafb83f05b0a.jpg"
+              />
+            </li>
+            <li class="Fire">
+              <img
+                src="https://i.pinimg.com/originals/b0/8a/11/b08a117112836f02cd6a7e42456bfd31.jpg"
+              />
+            </li>
+            <li class="Euphoria">
+              <img
+                src="https://i.pinimg.com/originals/2a/8b/63/2a8b63e1673525bd27ce63f87929ef3c.jpg"
+              />
+            </li>
+            <li class="Dna">
+              <img
+                src="https://i1.sndcdn.com/artworks-000244087107-wz25d9-t500x500.jpg"
+              />
+            </li>
+            <li class="GoGo">
+              <img
+                src="https://i.pinimg.com/originals/99/d9/c4/99d9c4b51e178bed33c8337f1092f3b6.jpg"
+              />
+            </li>
+            <li class="MicDrop">
+              <img
+                src="https://i1.sndcdn.com/artworks-000402783318-vlz0bb-t500x500.jpg"
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="wrapper justinwrap hidden">
+        <div class="gallery">
+          <ul>
+            <li class="Stay">
+              <img src="https://f4.bcbits.com/img/a0725618779_10.jpg" />
+            </li>
+            <li class="Baby">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/en/d/d1/Babycoverart.jpg"
+              />
+            </li>
+            <li class="Peaches">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/en/0/0a/Justin_Bieber_-_Peaches.png"
+              />
+            </li>
+            <li class="Yummy">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Justin_Bieber_-_Yummy.png/220px-Justin_Bieber_-_Yummy.png"
+              />
+            </li>
+            <li class="Sorry">
+              <img
+                src="https://i1.sndcdn.com/artworks-000148899176-tji0ug-t500x500.jpg"
+              />
+            </li>
+            <li class="Intentions">
+              <img
+                src="https://i0.wp.com/themusicalhype.com/wp-content/uploads/2020/02/justin-bieber-intentions-from-changes-def-jam.jpg?fit=1500%2C1500&ssl=1"
+              />
+            </li>
+            <li class="HoldOn">
+              <img
+                src="https://i1.sndcdn.com/artworks-JHbrt6tLIAcwh62u-IJDU4w-t500x500.jpg"
+              />
+            </li>
+            <li class="Ghost">
+              <img
+                src="https://assets.audiomack.com/kadilkaydee/9f9008d274472362cd786bce4efca7a11d17fa0eccf69da03ac5dad5f85f638a.jpeg?width=1000&height=1000&max=true"
+              />
+            </li>
+            <li class="whatDoYouMean">
+              <img
+                src="https://i1.sndcdn.com/artworks-000135870169-p6agh7-t500x500.jpg"
+              />
+            </li>
+            <li class="Holy">
+              <img
+                src="https://i1.sndcdn.com/artworks-FNI7yyp2DMy6hDWy-ipazLA-t500x500.jpg"
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="wrapper shawnwrap hidden">
+        <div class="gallery">
+          <ul>
+            <li class="Senorita">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Shawn_Mendes_and_Camila_Cabello_-_Se%C3%B1orita.png"
+              />
+            </li>
+            <li class="NothingHoldinMeBack">
+              <img
+                src="https://m.media-amazon.com/images/M/MV5BMzdiMGRlM2EtY2I1My00MDU3LWFlMTQtZTFkODk5MDY0ZTc4XkEyXkFqcGdeQXVyNDQ5MDYzMTk@._V1_FMjpg_UX1000_.jpg"
+              />
+            </li>
+            <li class="TreatYouBetter">
+              <img
+                src="https://c-fa.cdn.smule.com/rs-s47/arr/40/75/22819d79-2823-4eae-b416-aff478e55bfe_1024.jpg"
+              />
+            </li>
+            <li class="Stitches">
+              <img
+                src="https://i1.sndcdn.com/artworks-000133691508-8iu9c4-t500x500.jpg"
+              />
+            </li>
+            <li class="ItWillBeOkay">
+              <img
+                src="https://i1.sndcdn.com/artworks-C1tNnztxmbHzdWuF-RWMd2Q-t500x500.jpg"
+              />
+            </li>
+            <li class="SummerOfLove">
+              <img
+                src="https://pics.filmaffinity.com/Shawn_Mendes_Tainy_Summer_Of_Love_Music_Video-201267750-large.jpg"
+              />
+            </li>
+            <li class="NeverBeAlone">
+              <img
+                src="https://i1.sndcdn.com/artworks-000142800029-ipsktf-t500x500.jpg"
+              />
+            </li>
+            <li class="Nervous">
+              <img
+                src="https://www.crownnote.com/sites/default/files/styles/large/public/nervous.png.webp?itok=Gx26WMNm"
+              />
+            </li>
+            <li class="Wonder">
+              <img
+                src="https://i.pinimg.com/originals/bb/cc/c8/bbccc894ec1a594638530a0c04d431b4.jpg"
+              />
+            </li>
+            <li class="Imagination">
+              <img
+                src="https://i1.sndcdn.com/artworks-000175008337-kse4yk-t500x500.jpg"
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="wrapper selenawrap hidden">
+        <div class="gallery">
+          <ul>
+            <li class="IceCream">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/en/d/db/Blackpink_%26_Selena_Gomez_-_Ice_Cream.png"
+              />
+            </li>
+            <li class="SameOldLove">
+              <img
+                src="https://a3-images.myspacecdn.com/images04/6/3da892b19c794bd9ab330798272541bd/600x600.jpg"
+              />
+            </li>
+            <li class="LookAtHerNow">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/en/2/22/Selena_Gomez_-_Look_at_Her_Now.png"
+              />
+            </li>
+            <li class="Wolves">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/en/7/73/Selena_Gomez_and_Marshmello_Wolves.jpg"
+              />
+            </li>
+            <li class="HandToMyself">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/en/2/2c/Selena_Gomez_-_Hands_to_Myself_single_cover.png"
+              />
+            </li>
+            <li class="BackToYou">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/en/5/55/Selena_Gomez_-_Back_to_You_%28Artwork%29.jpg"
+              />
+            </li>
+            <li class="Rare">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/en/d/d1/Selena_Gomez_-_Rare.png"
+              />
+            </li>
+            <li class="Sober">
+              <img
+                src="https://i1.sndcdn.com/artworks-000273707030-ez5ij0-t500x500.jpg"
+              />
+            </li>
+            <li class="BadLiar">
+              <img
+                src="https://m.media-amazon.com/images/M/MV5BZjMwN2U3NGItNTdlZi00MWFiLWFiYmYtYzA2MDkyYWIyZTU1XkEyXkFqcGdeQXVyNjE0ODc0MDc@._V1_.jpg"
+              />
+            </li>
+            <li class="SelfLove">
+              <img
+                src="https://i1.sndcdn.com/artworks-SjNxBMKfx7z4ffYV-aXaHRg-t500x500.jpg"
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="wrapper blackpinkwrap hidden">
+        <div class="gallery">
+          <ul>
+            <li class="HowDoYouLikeThat">
+              <img
+                src="https://c-fa.cdn.smule.com/rs-s-sf-1/arr/56/d1/e3ec993c-4662-42b0-977c-bf3289ac1f19_1024.jpg"
+              />
+            </li>
+            <li class="DuDuDu">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/en/8/8b/Black_Pink_-_Ddu-Du_Ddu-Du_%28Japanese_version%29_artwork.png"
+              />
+            </li>
+            <li class="KillThisLove">
+              <img
+                src="https://i.pinimg.com/originals/27/91/fb/2791fb957b146bab8c6997b4e7a508d5.jpg"
+              />
+            </li>
+            <li class="LoveSickGirls">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/en/3/3e/Blackpink_-_Lovesick_Girls.png"
+              />
+            </li>
+            <li class="BoomBayah">
+              <img
+                src="https://i.pinimg.com/originals/18/d9/06/18d90604ca2781f0410229621ba7d418.jpg"
+              />
+            </li>
+            <li class="Whistle">
+              <img
+                src="https://i1.sndcdn.com/artworks-000541190250-2dny0x-t500x500.jpg"
+              />
+            </li>
+            <li class="LoveToHateMe">
+              <img
+                src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/50679769-3849-43ea-a515-a41e76784871/deekdkx-3d9385bb-47c1-4f6b-912e-615b2c125477.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzUwNjc5NzY5LTM4NDktNDNlYS1hNTE1LWE0MWU3Njc4NDg3MVwvZGVla2RreC0zZDkzODViYi00N2MxLTRmNmItOTEyZS02MTViMmMxMjU0NzcucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.rDaEsi7WL1HVMlnSkx1WV5yJr4sNYpSgjfs50aQHkCo"
+              />
+            </li>
+            <li class="SeeYouLater">
+              <img
+                src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/0fc9ded4-899e-408f-8b33-c893599d0397/dd2tea8-8fbcfc1c-4d17-4865-97ed-2bb024d87fb3.png/v1/fill/w_900,h_900,q_80,strp/blackpink___see_u_later_by_neonflowerdesigns_dd2tea8-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzBmYzlkZWQ0LTg5OWUtNDA4Zi04YjMzLWM4OTM1OTlkMDM5N1wvZGQydGVhOC04ZmJjZmMxYy00ZDE3LTQ4NjUtOTdlZC0yYmIwMjRkODdmYjMucG5nIiwiaGVpZ2h0IjoiPD05MDAiLCJ3aWR0aCI6Ijw9OTAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLndhdGVybWFyayJdLCJ3bWsiOnsicGF0aCI6Ilwvd21cLzBmYzlkZWQ0LTg5OWUtNDA4Zi04YjMzLWM4OTM1OTlkMDM5N1wvbmVvbmZsb3dlcmRlc2lnbnMtNC5wbmciLCJvcGFjaXR5Ijo5NSwicHJvcG9ydGlvbnMiOjAuNDUsImdyYXZpdHkiOiJjZW50ZXIifX0.5WmXGN1WnWS4XQJZBfFEUDMHSYnAGiTRMbG0bJGlpe4"
+              />
+            </li>
+            <li class="KickIt">
+              <img
+                src="https://i.pinimg.com/736x/e0/fb/d0/e0fbd0913381f2fe1d2e912d8b2c533e.jpg"
+              />
+            </li>
+            <li class="SureThings">
+              <img
+                src="https://i1.sndcdn.com/artworks-000238364939-jt69tb-t500x500.jpg"
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- modal class for trending -->
+      <div class="Trending-display hidden"></div>
     </div>
   </body>
 

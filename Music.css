@@ -6,6 +6,60 @@
   padding: 0;
 }
 
+/* Login page======================================================================================= */
+
+.loader {
+  margin-top: 10px;
+}
+
+.login {
+  width: 400px;
+  overflow: hidden;
+  margin: auto;
+  margin: 200 20 50 350px;
+  padding: 100px;
+  background: #000000;
+  border-radius: 15px;
+}
+h2 {
+  text-align: center;
+  color: #000000;
+  padding: 20px;
+  font-size: 100px;
+}
+label {
+  color: #ffffff;
+  font-size: 17px;
+  line-height: 2.5em;
+}
+#Uname {
+  width: 200px;
+  height: 30px;
+  border: none;
+  border-radius: 3px;
+  padding-left: 10px;
+}
+#Pass {
+  width: 200px;
+  height: 30px;
+  border: none;
+  border-radius: 3px;
+  padding-left: 8px;
+}
+#log {
+  width: 200px;
+  height: 30px;
+  border: none;
+  border-radius: 17px;
+  padding-left: 7px;
+  color: blue;
+}
+span {
+  color: white;
+  font-size: 17px;
+  line-height: 2em;
+  padding-left: 7px;
+}
 /* navigation bar=================================================================================== */
 
 li,
@@ -160,117 +214,99 @@ about section===================================================================
 /* Top Artist =======================================================================*/
 
 .TopArtist {
-  position: absolute;
-  justify-content: center;
-  align-items: center;
-  margin-top: 55px;
-  width: 100vw;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
-  column-gap: 25px;
-  row-gap: 20px;
+  columns: 3 100px;
+  column-gap: 1.5rem;
+  width: 90%;
+  margin: 2.5% auto;
 }
 
-.imaf_HarryStyles,
-.imaf_BillieEilish,
-.imaf_EdSheeran,
-.imaf_ArianaGrande,
-.imaf_ZyanMalik,
-.imaf_DuaLipa,
-.imaf_TaylorSwift,
-.imaf_BTS,
-.imaf_JustinBieber,
-.imaf_ShawnMendes,
-.imaf_SelenaGomes,
-.imaf_Blackpink {
-  width: 300px;
-  height: 180px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 8px;
-  box-shadow: 0 8rem 5rem rgba(0, 0, 0, 0.3);
-  opacity: 1;
+.grid-container {
+  width: 150px;
+  margin: 0 1.5rem 1.5rem 0;
+  display: inline-block;
+  width: 100%;
+  border: solid 2px black;
+  padding: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  transition: all 0.25s ease-in-out;
 }
 
-.imaf_BillieEilish {
-  background: URL("https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Billie_Eilish_2019_by_Glenn_Francis_%28cropped%29_2.jpg/800px-Billie_Eilish_2019_by_Glenn_Francis_%28cropped%29_2.jpg");
-  background-size: cover;
-  background-position: center;
-}
-.imaf_HarryStyles {
-  background: URL("https://media.npr.org/assets/img/2020/02/27/wide-use_hpromophoto_helenepambrun-72fdb64792139d94a06f18686d0bb3131a238a70-s1100-c50.jpg");
-  background-size: cover;
-  background-position: center;
-}
-.imaf_EdSheeran {
-  background: URL("https://st2.depositphotos.com/6694302/9685/i/600/depositphotos_96855090-stock-photo-ed-sheeran-concert.jpg");
-  background-size: cover;
-  background-position: center;
-}
-.imaf_ArianaGrande {
-  background: URL("https://i.scdn.co/image/ab6761610000e5ebcdce7620dc940db079bf4952");
-  background-size: cover;
-  background-position: center;
-}
-.imaf_ZyanMalik {
-  background: URL("https://aniportalimages.s3.amazonaws.com/media/details/zayynuuumsdfs2022011512393420220115124425.jpg");
-  background-size: cover;
-  background-position: center;
-}
-.imaf_DuaLipa {
-  background: URL("https://upload.wikimedia.org/wikipedia/commons/9/95/Dua_Lipa_with_Warner_Music.jpg");
-  background-size: cover;
-  background-position: center;
-}
-.imaf_TaylorSwift {
-  background: URL("https://i1.sndcdn.com/avatars-000500544273-6kcyh0-t500x500.jpg");
-  background-size: cover;
-  background-position: center;
-}
-.imaf_BTS {
-  background: URL("https://pyxis.nymag.com/v1/imgs/c10/524/1853b57c011cf5fd8ebc8f4b149345d5d3-BTS-JOIN-LOUIS-VUITTON-AS-HOUSE-AMBASSAD.rsquare.w1200.jpg");
-  background-size: cover;
-  background-position: center;
-}
-.imaf_JustinBieber {
-  background: URL("https://media.gq.com/photos/56bcb218cdf2db6945d2ef93/4:3/w_2000,h_1500,c_limit/bieber-coverstory-square.jpg");
-  background-size: cover;
-  background-position: center;
-}
-.imaf_ShawnMendes {
-  background: URL("https://yt3.ggpht.com/QTpsceScLWmzgZXO6lPJo-s0CzCaGoat2S8PZzfdKtvqJTUh7jCLtYvCPH1RbUzVCOz2t_RIqIA=s900-c-k-c0x00ffffff-no-rj");
-  background-size: cover;
-  background-position: center;
-}
-.imaf_SelenaGomes {
-  background: URL("https://m.media-amazon.com/images/M/MV5BMjAwNTE2MDMyMl5BMl5BanBnXkFtZTgwMjAyODM3MTI@._V1_UY1200_CR134,0,630,1200_AL_.jpg");
-  background-size: cover;
-  background-position: center;
-}
-.imaf_Blackpink {
-  background: URL("https://img.i-scmp.com/cdn-cgi/image/fit=contain,width=1098,format=auto/sites/default/files/styles/1200x800/public/d8/images/methode/2020/10/16/41e9b47c-07af-11eb-afc8-92e0da0ef1c3_image_hires_155550.jpg?itok=ihKswLDq&v=1602834958");
-  background-size: cover;
-  background-position: center;
+.imafx {
+  width: 100%;
+  filter: grayscale(0%);
+  border-radius: 5px;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  z-index: 0;
 }
 
-.nameofartistHarry,
-.nameofartistBillie,
-.nameofartistED,
-.nameofartistAriana,
-.nameofartistZyan,
-.nameofartistDua,
-.nameofartistTaylor,
-.nameofartistBTS,
-.nameofartistJustin,
-.nameofartistShwan,
-.nameofartistSelena,
-.nameofartistBlackpink {
-  align-items: center;
+.artistname {
+  margin: 5px 0;
+  padding: 0;
   text-align: center;
-  margin-top: 25%;
-  font-size: large;
-  font-weight: bold;
-  opacity: 0;
+  font-style: italic;
+}
+
+/* when clicked on top artist section =================================================== */
+
+.wrapper {
+  width: 90%;
+  margin: 100px auto;
+}
+
+div.gallery {
+  margin-top: 30px;
+}
+
+div.gallery ul {
+  list-style-type: none;
+  margin-left: 35px;
+}
+
+div.gallery ul li,
+div.gallery li img {
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+div.gallery ul li {
+  position: relative;
+  float: left;
+  width: 230px;
+  height: 230px;
+  margin: 5px;
+  padding: 5px;
+  color: black;
+  z-index: 0;
+}
+
+div.gallery ul li:hover {
+  z-index: 5;
+}
+
+div.gallery ul li img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 1px solid #dddddd;
+  padding: 5px;
+  width: 230px;
+  height: 230px;
+  background: #f0f0f0;
+}
+
+div.gallery ul li img:hover {
+  width: 300px;
+  height: 300px;
+  margin-top: -180px;
+  margin-left: -180px;
+  top: 65%;
+  left: 65%;
 }
 
 /* trending============================================================================= */
@@ -279,20 +315,32 @@ about section===================================================================
   display: grid;
   grid-gap: 25px;
   margin-top: 5%;
-  width: 60%;
-  margin-left: 20%;
+  width: 100%;
 }
-.trending1 {
+.trending1,
+.trending2 {
   background-color: black;
   border: 3px solid black;
   border-radius: 3px;
   color: white;
   padding: 30px;
+  border: dotted 2px black;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
-.trending1 {
+.trending1,
+.trending2 {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
+}
+
+.trending2 {
+  margin-left: 24%;
+  margin-right: 12%;
+}
+.trending1 {
+  margin-right: 24%;
+  margin-left: 12%;
 }
 
 .hidden {
