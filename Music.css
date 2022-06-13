@@ -4,62 +4,91 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  background-color: black;
 }
 
 /* Login page======================================================================================= */
 
-.loader {
-  margin-top: 10px;
+form {
+  height: 520px;
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.13);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(242, 6, 6, 0.964);
+  box-shadow: 0 0 40px rgba(242, 6, 6, 0.964);
+  padding: 50px 35px;
+}
+form * {
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  outline: none;
+  border: none;
+}
+form h3 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 42px;
+  text-align: center;
 }
 
-.login {
-  width: 400px;
-  overflow: hidden;
-  margin: auto;
-  margin: 200 20 50 350px;
-  padding: 100px;
-  background: #000000;
-  border-radius: 15px;
-}
-h2 {
-  text-align: center;
-  color: #000000;
-  padding: 20px;
-  font-size: 100px;
-}
 label {
-  color: #ffffff;
-  font-size: 17px;
-  line-height: 2.5em;
+  display: block;
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 500;
 }
-#Uname {
-  width: 200px;
-  height: 30px;
-  border: none;
+input {
+  display: block;
+  height: 50px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.07);
   border-radius: 3px;
-  padding-left: 10px;
+  padding: 0 10px;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 300;
 }
-#Pass {
-  width: 200px;
-  height: 30px;
-  border: none;
-  border-radius: 3px;
-  padding-left: 8px;
+::placeholder {
+  color: #e5e5e5;
 }
-#log {
-  width: 200px;
-  height: 30px;
-  border: none;
-  border-radius: 17px;
-  padding-left: 7px;
-  color: blue;
+.LogIn {
+  margin-top: 50px;
+  width: 100%;
+  transition: all 0.25s ease-in-out;
+  background-color: #ffffff;
+  color: #080710;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
 }
-span {
+
+.LogIn:hover,
+.SignUp:hover {
+  transition: all 0.25s ease-in-out;
+  background-color: black;
   color: white;
-  font-size: 17px;
-  line-height: 2em;
-  padding-left: 7px;
 }
+.SignUp {
+  margin-top: 30px;
+  width: 100%;
+  transition: all 0.25s ease-in-out;
+  background-color: #ffffff;
+  color: #080710;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 /* navigation bar=================================================================================== */
 
 li,
@@ -110,39 +139,76 @@ h1 {
 about section============================================================================================ */
 
 .About-display {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50%;
-
-  background-color: white;
-  padding: 6rem;
-  border-radius: 5px;
-  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
-  z-index: 10;
-}
-
-.close-modal {
-  position: absolute;
-  top: 1.2rem;
-  right: 2rem;
-  font-size: 5rem;
-  color: #333;
-  cursor: pointer;
-  border: none;
-  background: none;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
+  min-height: 90.5vh;
+  background-color: black;
+}
+.container {
+  width: 80%;
+  display: block;
+  margin: auto;
+  padding-top: 120px;
+}
+.content-section {
+  float: left;
+  width: 55%;
+}
+.image-section {
+  float: right;
+  width: 30%;
+  height: 30%;
+}
+.image-section img {
+  transition: all 0.5s ease 0s;
+  width: 80%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(3px);
-  z-index: 5;
+  height: auto;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(242, 6, 6, 0.964);
+  box-shadow: 0 0 0px rgba(242, 6, 6, 0.964);
+}
+
+.content-section .content h3 {
+  margin-top: 20px;
+  color: #f5edf5;
+  font-size: 31px;
+}
+.content-section .content p {
+  margin-top: 10px;
+  font-family: sans-serif;
+  color: red;
+  font-size: 18px;
+  line-height: 1.5;
+}
+.content-section .content .button {
+  margin-top: 30px;
+  transition: all 0.3s ease 0s;
+}
+.content-section .content .button a {
+  background-color: #3d3d3d;
+  padding: 12px 40px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 25px;
+  letter-spacing: 1.5px;
+}
+.content-section .content .button a:hover {
+  transition: all 0.3s ease 0s;
+  background-color: #a52a2a;
+  color: #fff;
+}
+.content-section .social {
+  margin: 40px 40px;
+}
+.content-section .social i {
+  color: #f3eeee;
+  font-size: 30px;
+  padding: 0px 10px;
+}
+.content-section .social i:hover {
+  transition: all 0.3s ease 0s;
+  color: #e30101;
 }
 
 /*main================================================================================*/
@@ -163,30 +229,43 @@ about section===================================================================
   margin-top: 25px;
 }
 
-.track-art {
-  margin: 25px;
-  height: 250px;
-  width: 250px;
-  background: URL("https://media.istockphoto.com/vectors/music-note-icon-vector-illustration-vector-id1175435360?k=20&m=1175435360&s=612x612&w=0&h=1yoTgUwobvdFlNxUQtB7_NnWOUD83XOMZHvxUzkOJJs=");
-  background-size: cover;
-  background-position: center;
-  border-radius: 15%;
+.main .playing_part {
+  margin-top: 50px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
-
-/* Changing the font sizes to suitable ones */
+.main .playing_part .img {
+  height: 180px;
+  width: 180px;
+  border-radius: 90%;
+  overflow: hidden;
+  border-radius: 200px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(242, 6, 6, 0.964);
+  box-shadow: 0px 0px 25px rgba(242, 6, 6, 0.964);
+}
+.main .playing_part .img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
 
 .track-name {
   font-size: 3rem;
+  color: white;
 }
 
 .track-artist {
   font-size: 1.5rem;
+  color: rgb(241, 6, 6);
 }
 
-/* Using flex with the row direction to
-  align items in a horizontal direction */
 .buttons {
   display: flex;
+  color: white;
   flex-direction: row;
   align-items: center;
 }
@@ -200,15 +279,21 @@ about section===================================================================
   transition: opacity 0.2s;
 }
 
-/* Change the opacity when mouse is hovered */
-.playpause-track:hover,
-.volume-track:hover,
-.like-track:hover {
+.bx-play:hover {
+  cursor: pointer;
   opacity: 1;
 }
-
-.fa-heart:hover {
+.bx-music:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+.bx-pause:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+.bx-heart:hover {
   color: red;
+  cursor: pointer;
 }
 
 /* Top Artist =======================================================================*/
@@ -232,19 +317,32 @@ about section===================================================================
   transition: all 0.25s ease-in-out;
 }
 
+.grid-container:hover {
+  width: 95%;
+}
+
 .imafx {
   width: 100%;
-  filter: grayscale(0%);
   border-radius: 5px;
-  -webkit-transition: all 0.1s ease-in-out;
-  -moz-transition: all 0.1s ease-in-out;
-  -o-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border-radius: 200px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(242, 6, 6, 0.964);
+  box-shadow: 0px 0px 25px rgba(242, 6, 6, 0.964);
   z-index: 0;
+}
+
+.imafx:hover {
+  cursor: pointer;
+  border-radius: 0px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(242, 6, 6, 0.964);
+  box-shadow: 0px 0px 40px rgba(214, 246, 5, 0.964);
 }
 
 .artistname {
   margin: 5px 0;
+  color: white;
   padding: 0;
   text-align: center;
   font-style: italic;
@@ -272,6 +370,8 @@ div.gallery li img {
   -moz-transition: all 0.1s ease-in-out;
   -o-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
+
+  border-radius: 100px;
 }
 
 div.gallery ul li {
@@ -287,13 +387,16 @@ div.gallery ul li {
 
 div.gallery ul li:hover {
   z-index: 5;
+  cursor: pointer;
 }
 
 div.gallery ul li img {
   position: absolute;
   left: 0;
   top: 0;
-  border: 1px solid #dddddd;
+  transition: all 0.3s ease-in-out;
+
+  border: 3px solid #853434;
   padding: 5px;
   width: 230px;
   height: 230px;
@@ -305,6 +408,11 @@ div.gallery ul li img:hover {
   height: 300px;
   margin-top: -180px;
   margin-left: -180px;
+  border-radius: 0px;
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(242, 6, 6, 0.964);
+  box-shadow: 0px 0px 20px rgba(242, 6, 6, 0.964);
   top: 65%;
   left: 65%;
 }
@@ -346,3 +454,5 @@ div.gallery ul li img:hover {
 .hidden {
   display: none;
 }
+
+/* ------------------ */
