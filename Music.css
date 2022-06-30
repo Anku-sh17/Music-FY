@@ -7,8 +7,60 @@
   background-color: black;
 }
 
-/* Login page======================================================================================= */
+/* Intro page */
+.header {
+  padding: 0rem 3rem;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.header__title {
+  flex: 1;
+  max-width: 115rem;
+  display: grid;
+  grid-template-columns: 3fr 3fr;
+  row-gap: 3rem;
+  margin-top: 10%;
+  align-content: center;
+  justify-content: center;
+  align-items: start;
+  justify-items: start;
+}
+
+h1 {
+  font-size: 10rem;
+  line-height: 1.35;
+  color: white;
+}
+
+h4 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: white;
+}
+
+h4:hover {
+  color: rgb(165, 42, 42);
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.header__img {
+  width: 100%;
+  grid-column: 2 / 3;
+  grid-row: 1 / span 4;
+  transform: translateY(-6rem);
+  box-shadow: #e30101;
+}
+
+.highlight {
+  position: relative;
+  color: red;
+}
+
+/* Login page======================================================================================= */
 form {
   height: 520px;
   width: 400px;
@@ -23,6 +75,7 @@ form {
   box-shadow: 0 0 40px rgba(242, 6, 6, 0.964);
   padding: 50px 35px;
 }
+
 form * {
   font-family: "Poppins", sans-serif;
   color: #ffffff;
@@ -70,12 +123,19 @@ input {
   cursor: pointer;
 }
 
-.LogIn:hover,
-.SignUp:hover {
+.Register {
+  margin-top: 30px;
+  width: 100%;
   transition: all 0.25s ease-in-out;
-  background-color: black;
-  color: white;
+  background-color: #ffffff;
+  color: #080710;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
 }
+
 .SignUp {
   margin-top: 30px;
   width: 100%;
@@ -87,6 +147,14 @@ input {
   font-weight: 600;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.LogIn:hover,
+.SignUp:hover,
+.Register:hover {
+  transition: all 0.25s ease-in-out;
+  background-color: black;
+  color: white;
 }
 
 /* navigation bar=================================================================================== */
@@ -197,6 +265,7 @@ about section===================================================================
   transition: all 0.3s ease 0s;
   background-color: #a52a2a;
   color: #fff;
+  cursor: pointer;
 }
 .content-section .social {
   margin: 40px 40px;
@@ -213,8 +282,23 @@ about section===================================================================
 
 /*main================================================================================*/
 
+.main {
+  height: 580px;
+  width: 500px;
+  background-color: rgba(0, 0, 0, 0.13);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 55%;
+  left: 50%;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  /* border: 2px solid rgba(242, 6, 6, 0.964); */
+  box-shadow: 0 0 40px rgba(242, 6, 6, 0.964);
+  padding: 50px 35px;
+}
+
 .player {
-  height: 85vh;
+  height: 65vh;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -244,7 +328,7 @@ about section===================================================================
   overflow: hidden;
   border-radius: 200px;
   backdrop-filter: blur(10px);
-  border: 2px solid rgba(242, 6, 6, 0.964);
+  /* border: 2px solid rgba(242, 6, 6, 0.964); */
   box-shadow: 0px 0px 25px rgba(242, 6, 6, 0.964);
 }
 .main .playing_part .img img {
@@ -273,7 +357,7 @@ about section===================================================================
 .playpause-track,
 .volume-track,
 .like-track {
-  padding: 45px;
+  padding: 25px;
   opacity: 0.8;
   /* Smoothly transition the opacity */
   transition: opacity 0.2s;
@@ -299,8 +383,8 @@ about section===================================================================
 /* Top Artist =======================================================================*/
 
 .TopArtist {
-  columns: 3 100px;
-  column-gap: 1.5rem;
+  columns: 4 100px;
+  column-gap: 3rem;
   width: 90%;
   margin: 2.5% auto;
 }
@@ -314,11 +398,7 @@ about section===================================================================
   padding: 5px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
-  transition: all 0.25s ease-in-out;
-}
-
-.grid-container:hover {
-  width: 95%;
+  transition: all 0.2s ease-in-out;
 }
 
 .imafx {
@@ -327,7 +407,6 @@ about section===================================================================
   transition: all 0.3s ease-in-out;
   border-radius: 200px;
   backdrop-filter: blur(10px);
-  border: 2px solid rgba(242, 6, 6, 0.964);
   box-shadow: 0px 0px 25px rgba(242, 6, 6, 0.964);
   z-index: 0;
 }
@@ -336,13 +415,12 @@ about section===================================================================
   cursor: pointer;
   border-radius: 0px;
   backdrop-filter: blur(10px);
-  border: 2px solid rgba(242, 6, 6, 0.964);
   box-shadow: 0px 0px 40px rgba(214, 246, 5, 0.964);
 }
 
 .artistname {
   margin: 5px 0;
-  color: white;
+  color: rgb(255, 255, 255);
   padding: 0;
   text-align: center;
   font-style: italic;
@@ -420,35 +498,52 @@ div.gallery ul li img:hover {
 /* trending============================================================================= */
 
 .Trending-display {
-  display: grid;
-  grid-gap: 25px;
-  margin-top: 5%;
+  columns: 4 100px;
+  column-gap: 4rem;
+  width: 90%;
+  margin: 5% auto;
+}
+
+.grid-containerTrending {
+  width: 150px;
+  margin: 0 1.5rem 1.5rem 0;
+  display: inline-block;
   width: 100%;
-}
-.trending1,
-.trending2 {
-  background-color: black;
-  border: 3px solid black;
-  border-radius: 3px;
-  color: white;
-  padding: 30px;
-  border: dotted 2px black;
+  border: solid 2px black;
+  padding: 5px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  transition: all 0.25s ease-in-out;
 }
 
-.trending1,
-.trending2 {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+.grid-containerTrending:hover {
+  width: 105%;
 }
 
-.trending2 {
-  margin-left: 24%;
-  margin-right: 12%;
+.imafxTrending {
+  width: 100%;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(242, 6, 6, 0.964);
+  box-shadow: 0px 0px 30px rgba(196, 33, 21, 0.964);
+  z-index: 0;
 }
-.trending1 {
-  margin-right: 24%;
-  margin-left: 12%;
+
+.imafxTrending:hover {
+  cursor: pointer;
+  border-radius: 0px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(34, 242, 6, 0.964);
+  box-shadow: 0px 0px 40px rgba(79, 196, 21, 0.964);
+}
+
+.artistnameTrending {
+  margin: 5px 0;
+  color: white;
+  padding: 0;
+  text-align: center;
+  font-style: italic;
 }
 
 .hidden {
